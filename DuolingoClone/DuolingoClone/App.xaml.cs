@@ -1,9 +1,8 @@
-﻿using Prism;
+﻿using DuolingoClone.Views;
+using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace DuolingoClone
 {
@@ -26,6 +25,11 @@ namespace DuolingoClone
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<LessonsView>();
+            containerRegistry.RegisterForNavigation<TrainingView>();
+            containerRegistry.RegisterForNavigation<ProfileView>();
+            containerRegistry.RegisterForNavigation<RankingView>();
+            containerRegistry.RegisterForNavigation<StoreView>();
         }
 
         protected override void OnStart()
