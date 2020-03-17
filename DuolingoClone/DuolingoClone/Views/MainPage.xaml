@@ -8,16 +8,7 @@
     android:TabbedPage.ToolbarPlacement="Bottom"
     BarBackgroundColor="White"
     BarTextColor="Black"
-    xmlns:views="clr-namespace:DuolingoClone.Views"
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.MainPage"
     Title="Titulo App">
-
-    <TabbedPage.Children>
-        <views:LessonsView/>
-        <views:TrainingView/>
-        <views:ProfileView/>
-        <views:RankingView/>
-        <views:StoreView/>
-    </TabbedPage.Children>
 </TabbedPage>
