@@ -10,7 +10,8 @@
     BarTextColor="Black"
     xmlns:views="clr-namespace:DuolingoClone.Views"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.MainPage">
+    x:Class="DuolingoClone.Views.MainPage"
+    Title="Titulo App">
 
     <TabbedPage.Children>
         <views:LessonsView/>

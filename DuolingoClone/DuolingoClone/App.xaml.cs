@@ -19,7 +19,8 @@ namespace DuolingoClone
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync("MainPage");
+            string mainPage = $"{nameof(NavigationPage)}/{nameof(MainPage)}";
+            await NavigationService.NavigateAsync(mainPage);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

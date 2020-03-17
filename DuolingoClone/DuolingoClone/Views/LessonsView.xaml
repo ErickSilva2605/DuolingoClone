@@ -4,14 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.LessonsView"
     Title="Lessons">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Lessons view"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <AbsoluteLayout>
+            <ScrollView
+                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                AbsoluteLayout.LayoutFlags="All">
+                <StackLayout>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
+                </StackLayout>
+            </ScrollView>
+            <controls:FormsFloatingActionButton
+                IsVisible="{OnPlatform Android=true, iOS=false}"
+                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Command="{Binding NavigateToTrainingCommand}"/>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
