@@ -12,12 +12,24 @@ using Xamarin.Forms.Xaml;
 namespace DuolingoClone.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StoreView : ContentPage, IDynamicTitle
+    public partial class StoreView : ContentPage, IDynamicTitle, ITabPageIcons
     {
+        private readonly string _iconStore = "tab_store";
+        private readonly string _iconStoreSelected = "tab_store_selected";
         private View _title;
         public StoreView()
         {
             InitializeComponent();
+        }
+
+        public string GetIcon()
+        {
+            return _iconStore;
+        }
+
+        public string GetSelectedIcon()
+        {
+            return _iconStoreSelected;
         }
 
         public View GetTitle()

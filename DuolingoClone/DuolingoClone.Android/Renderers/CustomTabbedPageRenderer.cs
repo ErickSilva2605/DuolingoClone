@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Support.Design.BottomNavigation;
 using Android.Support.Design.Widget;
 using DuolingoClone.Droid.Renderers;
+using DuolingoClone.Interfaces;
 using DuolingoClone.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -58,54 +59,23 @@ namespace DuolingoClone.Droid.Renderers
             {
                 var androidTab = _bottomNavigationView.Menu.GetItem(index);
 
-                if (_formsTabs.Children[index] is LessonsView)
+                if (_formsTabs.Children[index] is ITabPageIcons tabPage)
                 {
                     if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
                     {
-                        androidTab.SetIcon(Resource.Drawable.tab_lessons_selected);
+                        androidTab.SetIcon(GetIconIdByFileName(tabPage.GetSelectedIcon()));
                         continue;
                     }
 
-                    androidTab.SetIcon(Resource.Drawable.tab_lessons);
-                    continue;
-                }
-
-                if (_formsTabs.Children[index] is ProfileView)
-                {
-                    if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {
-                        androidTab.SetIcon(Resource.Drawable.tab_profile_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_profile);
-                    continue;
-                }
-
-                if (_formsTabs.Children[index] is RankingView)
-                {
-                    if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {
-                        androidTab.SetIcon(Resource.Drawable.tab_ranking_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_ranking);
-                    continue;
-                }
-
-                if (_formsTabs.Children[index] is StoreView)
-                {
-                    if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {
-                        androidTab.SetIcon(Resource.Drawable.tab_store_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_store);
+                    androidTab.SetIcon(GetIconIdByFileName(tabPage.GetIcon()));
                     continue;
                 }
             }
+        }
+
+        private int GetIconIdByFileName(string fileName)
+        {
+            return Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
         }
     }
 }
