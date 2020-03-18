@@ -6,8 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.LessonsView"
-    Title="Lessons">
+    x:Class="DuolingoClone.Views.LessonsView">
     <ContentPage.Content>
         <AbsoluteLayout>
             <ScrollView

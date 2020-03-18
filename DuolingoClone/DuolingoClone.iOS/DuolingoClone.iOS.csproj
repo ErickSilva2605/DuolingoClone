@@ -68,6 +68,8 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\DINNextRoundedLTPro-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\DINNextRoundedLTPro-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -139,5 +141,214 @@
       <Name>DuolingoClone</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_training_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\crown_gray_stroke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\crown_stroke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_baby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_bike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_dialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_divisor_castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_sock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_configuration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_diamont.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navbar_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_achievements_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_bart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_homer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_lisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_marge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_user.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ranking_duo_sleeping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ranking_level.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ranking_level_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_duo_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_bread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_coffe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_lessons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_lessons_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_profile_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_ranking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_ranking_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_store_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_stories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_stories_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_training.png" />
+  </ItemGroup>
 </Project>
