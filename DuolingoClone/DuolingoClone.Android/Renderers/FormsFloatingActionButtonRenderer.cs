@@ -3,6 +3,7 @@ using Android.Content.Res;
 using Android.Support.Design.Widget;
 using DuolingoClone.Controls;
 using DuolingoClone.Droid.Renderers;
+using DuolingoClone.Droid.Utils;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -47,7 +48,7 @@ namespace DuolingoClone.Droid.Renderers
             if (fileName == null)
                 return;
 
-            var iconId = Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
+            var iconId = ResourcesUtil.GetIconIdByFileName(fileName,Context);
             _floatingActionButton.SetImageResource(iconId);
         }
 

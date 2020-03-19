@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Support.Design.BottomNavigation;
 using Android.Support.Design.Widget;
 using DuolingoClone.Droid.Renderers;
+using DuolingoClone.Droid.Utils;
 using DuolingoClone.Interfaces;
 using DuolingoClone.Views;
 using Xamarin.Forms;
@@ -63,19 +64,14 @@ namespace DuolingoClone.Droid.Renderers
                 {
                     if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
                     {
-                        androidTab.SetIcon(GetIconIdByFileName(tabPage.GetSelectedIcon()));
+                        androidTab.SetIcon(ResourcesUtil.GetIconIdByFileName(tabPage.GetSelectedIcon(),Context));
                         continue;
                     }
 
-                    androidTab.SetIcon(GetIconIdByFileName(tabPage.GetIcon()));
+                    androidTab.SetIcon(ResourcesUtil.GetIconIdByFileName(tabPage.GetIcon(), Context));
                     continue;
                 }
             }
-        }
-
-        private int GetIconIdByFileName(string fileName)
-        {
-            return Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
         }
     }
 }
