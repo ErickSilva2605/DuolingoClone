@@ -28,12 +28,27 @@ namespace DuolingoClone.Droid.Renderers
                 _floatingActionButton = new FloatingActionButton(Context);
                 _floatingActionButton.UseCompatPadding = true;
 
+                ConfigureDrawableIcon();
                 ConfigureBackgroundColor();
                 
                 _floatingActionButton.Click += OnFabClick;
 
                 SetNativeControl(_floatingActionButton);
             }
+        }
+
+        private void ConfigureDrawableIcon()
+        {
+            if (Element == null)
+                return;
+
+            var fileName = (Element.ImageSource as FileImageSource)?.File;
+
+            if (fileName == null)
+                return;
+
+            var iconId = Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
+            _floatingActionButton.SetImageResource(iconId);
         }
 
         private void ConfigureBackgroundColor()
