@@ -7,8 +7,39 @@
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.TitleViews.StoreTitleView">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Store Title View" />
-      </StackLayout>
-  </ContentView.Content>
+        <Grid 
+            Margin="{OnPlatform Android='0,0,15,0', iOS=0}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="1"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="Store"
+                TextColor="#B0AFAF"
+                FontSize="Medium"
+                FontAttributes="Bold"/>
+            <StackLayout
+                Spacing="0"
+                Orientation="Horizontal"
+                HorizontalOptions="End"
+                Grid.Column="2">
+                <Image
+                    HorizontalOptions="End"
+                    HeightRequest="30"
+                    Source="navbar_diamont.png"/>
+                <Label
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Text="300"
+                    TextColor="#DE5C56"
+                    FontSize="Medium"
+                    FontAttributes="Bold"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
 </ContentView>

@@ -7,8 +7,50 @@
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.TitleViews.LessonsTitleView">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Lessons Title view" />
-      </StackLayout>
+      <FlexLayout
+          Margin="{OnPlatform Android='0,0,15,0', iOS=0}"
+          Direction="Row"
+          AlignItems="Center"
+          JustifyContent="SpaceBetween">
+            <Image
+                HeightRequest="30"
+                Source="navbar_english.png"/>
+          
+            <StackLayout
+                Orientation="Horizontal">
+                <Image
+                    HeightRequest="30"
+                    Source="navbar_crown.png"/>
+                <Label 
+                    Text="74"
+                    TextColor="#F3C747"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"/>
+            </StackLayout>
+          
+            <StackLayout
+                Orientation="Horizontal">
+                <Image
+                    HeightRequest="30"
+                    Source="navbar_fire.png"/>
+                <Label 
+                    Text="0"
+                    TextColor="#B0AFAF"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal">
+                <Image
+                    HeightRequest="30"
+                    Source="navbar_heart.png"/>
+                <Label 
+                    Text="4"
+                    TextColor="#DE5C56"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
   </ContentView.Content>
 </ContentView>

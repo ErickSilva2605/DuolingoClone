@@ -7,8 +7,12 @@
     xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
     mc:Ignorable="d"
     x:Class="DuolingoClone.App">
-   
-    <Application.Resources>
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

@@ -6,9 +6,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.TitleViews.ProfileTitleView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Profile title view" />
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <Grid 
+            Margin="{OnPlatform Android='0,0,15,0', iOS=0}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="1"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="Profile"
+                TextColor="#B0AFAF"
+                FontSize="Medium"
+                FontAttributes="Bold"/>
+            <Image
+                Grid.Column="2"
+                HorizontalOptions="End"
+                HeightRequest="40"
+                Source="navbar_configuration.png"/>
+        </Grid>
+    </ContentView.Content>
 </ContentView>
