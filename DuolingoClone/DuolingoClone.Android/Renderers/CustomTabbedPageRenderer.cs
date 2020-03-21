@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Support.Design.BottomNavigation;
 using Android.Support.Design.Widget;
+using Android.Support.V4.View;
 using DuolingoClone.Droid.Renderers;
 using DuolingoClone.Droid.Utils;
 using DuolingoClone.Interfaces;
@@ -19,6 +20,9 @@ namespace DuolingoClone.Droid.Renderers
         private readonly int _iconSize = 130;
         private BottomNavigationView _bottomNavigationView;
         private TabbedPage _formsTabs;
+
+        private ViewPager PagerLayout { get; set; }
+
         public CustomTabbedPageRenderer(Context context) : base(context)
         {
         }
@@ -33,6 +37,14 @@ namespace DuolingoClone.Droid.Renderers
                 _formsTabs.CurrentPageChanged += OnCurrentPageChanged;
 
                 var relativeLayout = base.GetChildAt(0) as Android.Widget.RelativeLayout;
+                PagerLayout = relativeLayout.GetChildAt(0) as ViewPager;
+
+                if (PagerLayout != null)
+                {
+                    var propertyInfo = PagerLayout.GetType().GetProperty("EnableGesture");
+                    propertyInfo.SetValue(PagerLayout, false, null);
+                }
+
                 _bottomNavigationView = relativeLayout.GetChildAt(1) as BottomNavigationView;
                 _bottomNavigationView.ItemIconTintList = null;
                 _bottomNavigationView.ItemIconSize = _iconSize;
