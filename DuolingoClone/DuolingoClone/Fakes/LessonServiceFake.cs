@@ -31,6 +31,17 @@ namespace DuolingoClone.Fakes
                             GetNewLesson("Saudações"),
                             GetNewLesson("Viagem")
                         }
+                    },
+
+                    new LessonGroupModel
+                    {
+                        Type = LessonGroupTypeEnum.Bonus,
+                        Lessons = new List<LessonModel>()
+                        {
+                            GetNewLesson("Bônus"),
+                            GetNewLesson("Bônus"),
+                            GetNewLesson("Bônus")
+                        }
                     }
                 };
             });

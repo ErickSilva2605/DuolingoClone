@@ -5,6 +5,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:DuolingoClone.Controls"
+    xmlns:templates="clr-namespace:DuolingoClone.Templates"
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.LessonsView">
     <ContentPage.Content>
@@ -12,15 +13,17 @@
             <ScrollView
                 AbsoluteLayout.LayoutBounds="1,1,1,1"
                 AbsoluteLayout.LayoutFlags="All">
-                <StackLayout>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                    <Label Text="Lessons view" FontSize="60" Margin="0,20"/>
-                </StackLayout>
+
+                <FlexLayout
+                    BindableLayout.ItemsSource="{Binding LessonGroups}"
+                    BindableLayout.ItemTemplateSelector="{templates:LessonGroupDataTemplateSelector}"
+                    Direction="Column"
+                    >
+                    
+                </FlexLayout>
+                
             </ScrollView>
+
             <controls:FormsFloatingActionButton
                 IsVisible="{OnPlatform Android=true, iOS=false}"
                 AbsoluteLayout.LayoutBounds="1,1,1,1"
@@ -30,6 +33,7 @@
                 BackgroundColor="White"
                 ImageSource="fab_training"
                 Command="{Binding NavigateToTrainingCommand}"/>
+            
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
