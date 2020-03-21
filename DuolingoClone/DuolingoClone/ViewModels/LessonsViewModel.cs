@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using DuolingoClone.Interfaces;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace DuolingoClone.ViewModels
     public class LessonsViewModel : ViewModelBase
     {
         public ICommand NavigateToTrainingCommand { get; private set; }
-        public LessonsViewModel()
+        public LessonsViewModel(ILessonService lessonService)
         {
             NavigateToTrainingCommand = new DelegateCommand(NavigateToTrainingExecute);
         }

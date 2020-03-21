@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuolingoClone.Android", "Du
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuolingoClone.iOS", "DuolingoClone\DuolingoClone.iOS\DuolingoClone.iOS.csproj", "{20CEC254-E8B9-46FD-9332-CFCAA61CD214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuolingoClone", "DuolingoClone\DuolingoClone\DuolingoClone.csproj", "{25867A97-9B99-4F1E-B5C1-A172C77D78EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuolingoClone", "DuolingoClone\DuolingoClone\DuolingoClone.csproj", "{25867A97-9B99-4F1E-B5C1-A172C77D78EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

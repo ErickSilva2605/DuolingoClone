@@ -1,4 +1,6 @@
-﻿using DuolingoClone.ViewModels;
+﻿using DuolingoClone.Fakes;
+using DuolingoClone.Interfaces;
+using DuolingoClone.ViewModels;
 using DuolingoClone.Views;
 using Prism;
 using Prism.DryIoc;
@@ -32,6 +34,8 @@ namespace DuolingoClone
             containerRegistry.RegisterForNavigation<ProfileView, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<RankingView, RankingViewModel>();
             containerRegistry.RegisterForNavigation<StoreView, StoreViewModel>();
+
+            containerRegistry.Register<ILessonService, LessonServiceFake>();
         }
 
         protected override void OnStart()
