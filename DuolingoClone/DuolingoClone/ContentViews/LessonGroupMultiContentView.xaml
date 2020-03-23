@@ -4,11 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:contentViews="clr-namespace:DuolingoClone.ContentViews"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.LessonGroupMultiContentView">
   <ContentView.Content>
-      <StackLayout>
-            <Label Text="Multi ContentView" />
-      </StackLayout>
+        <FlexLayout
+            Direction="Row"
+            JustifyContent="Center"
+            AlignItems="Center"
+            HeightRequest="160"
+            BindableLayout.ItemsSource="{Binding Lessons}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <contentViews:LessonContetView/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
   </ContentView.Content>
 </ContentView>
