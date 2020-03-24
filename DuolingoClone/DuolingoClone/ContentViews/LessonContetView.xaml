@@ -8,9 +8,25 @@
     x:Class="DuolingoClone.ContentViews.LessonContetView"
     Margin="15,0">
   <ContentView.Content>
-      <StackLayout>
+      <StackLayout
+          Spacing="15">
+            <Grid
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <BoxView
+                    BackgroundColor="Red"
+                    CornerRadius="50"/>
+                <Image
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    HeightRequest="35"
+                    Source="navbar_crown.png"/>
+            </Grid>
           <Label 
               Text="{Binding Name}" 
+              HorizontalTextAlignment="Center"
               FontSize="24"/>
       </StackLayout>
   </ContentView.Content>
