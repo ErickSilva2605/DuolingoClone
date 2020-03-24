@@ -19,7 +19,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Single,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Introdução", "4")
+                            GetNewLesson("Introdução", "4", "lesson_egg")
                         }
                      },
 
@@ -28,8 +28,18 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Saudações", "4"),
-                            GetNewLesson("Viagem", string.Empty)
+                            GetNewLesson("Saudações", "4", "lesson_dialog"),
+                            GetNewLesson("Viagem", string.Empty, "lesson_airplane")
+                        }
+                    },
+
+                    new LessonGroupModel
+                    {
+                        Type = LessonGroupTypeEnum.Multi,
+                        Lessons = new List<LessonModel>()
+                        {
+                            GetNewLesson("Cafeteria", string.Empty, "lesson_hamburger"),
+                            GetNewLesson("Famílias", string.Empty, "lesson_baby")
                         }
                     },
 
@@ -38,21 +48,22 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Bonus,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Bônus", string.Empty),
-                            GetNewLesson("Bônus", string.Empty),
-                            GetNewLesson("Bônus", string.Empty)
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus"),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus"),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus")
                         }
                     }
                 };
             });
         }
 
-        private LessonModel GetNewLesson(string name, string level)
+        private LessonModel GetNewLesson(string name, string level, string icon)
         {
             return new LessonModel
             {
                 Name = name,
-                Level= level
+                Level= level,
+                Icon = icon
             };
         }
     }
