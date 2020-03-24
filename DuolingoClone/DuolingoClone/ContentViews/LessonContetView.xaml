@@ -18,19 +18,21 @@
                 <BoxView
                     BackgroundColor="Red"
                     CornerRadius="50"/>
-                <Image
+
+                <Grid
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    HeightRequest="35"
-                    Margin="0,0,-22,-10"
-                    Source="navbar_crown.png"/>
-                <Label 
-                    VerticalOptions="End"
-                    HorizontalOptions="End"
-                    Margin="0,0,-7,-7"
-                    Text="{Binding Level}" 
-                    TextColor="#CE8830"
-                    FontSize="Medium"/>   
+                    Margin="0,0,-21,-9"
+                    HeightRequest="35">
+                    <Image
+                        Source="navbar_crown.png"/>
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Text="{Binding Level}" 
+                        TextColor="#CE8830"
+                        FontSize="Medium"/>
+                </Grid>
             </Grid>
             <Label 
               Text="{Binding Name}" 
