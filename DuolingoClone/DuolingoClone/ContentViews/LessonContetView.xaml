@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:DuolingoClone.Converters"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.LessonContetView"
     Margin="15,0">
@@ -16,7 +17,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <BoxView
-                    BackgroundColor="Red"
+                    BackgroundColor="{Binding Level, Converter={converters:LevelToColorConverter}}"
                     CornerRadius="50"/>
                 <Image
                     HeightRequest="60"
@@ -29,7 +30,7 @@
                     Margin="0,0,-21,-9"
                     HeightRequest="35">
                     <Image
-                        Source="crown_stroke.png"/>
+                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"/>
                     <Label
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Center"
