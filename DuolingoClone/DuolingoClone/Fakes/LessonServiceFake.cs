@@ -19,7 +19,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Single,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Introdução")
+                            GetNewLesson("Introdução", "4")
                         }
                      },
 
@@ -28,8 +28,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Saudações"),
-                            GetNewLesson("Viagem")
+                            GetNewLesson("Saudações", "4"),
+                            GetNewLesson("Viagem", string.Empty)
                         }
                     },
 
@@ -38,20 +38,21 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Bonus,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Bônus"),
-                            GetNewLesson("Bônus"),
-                            GetNewLesson("Bônus")
+                            GetNewLesson("Bônus", string.Empty),
+                            GetNewLesson("Bônus", string.Empty),
+                            GetNewLesson("Bônus", string.Empty)
                         }
                     }
                 };
             });
         }
 
-        private LessonModel GetNewLesson(string name)
+        private LessonModel GetNewLesson(string name, string level)
         {
             return new LessonModel
             {
-                Name = name
+                Name = name,
+                Level= level
             };
         }
     }

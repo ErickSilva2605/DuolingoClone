@@ -22,12 +22,20 @@
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     HeightRequest="35"
+                    Margin="0,0,-22,-10"
                     Source="navbar_crown.png"/>
+                <Label 
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Margin="0,0,-7,-7"
+                    Text="{Binding Level}" 
+                    TextColor="#CE8830"
+                    FontSize="Medium"/>   
             </Grid>
-          <Label 
+            <Label 
               Text="{Binding Name}" 
               HorizontalTextAlignment="Center"
               FontSize="24"/>
-      </StackLayout>
+        </StackLayout>
   </ContentView.Content>
 </ContentView>
