@@ -84,11 +84,29 @@ namespace DuolingoClone.Fakes
 
                     new LessonGroupModel
                     {
+                        Type = LessonGroupTypeEnum.Divisor,
+                        Lessons = new List<LessonModel>()
+                        {
+                            GetNewLesson(string.Empty, "1", "lesson_divisor_castle", string.Empty)
+                        }
+                    },
+
+                    new LessonGroupModel
+                    {
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
                             GetNewLesson("Rotinas", "1", "lesson_bike", _colorLevel1),
                             GetNewLesson("Emoções", string.Empty, "lesson_heart", _colorLevel0)
+                        }
+                    },
+
+                    new LessonGroupModel
+                    {
+                        Type = LessonGroupTypeEnum.Divisor,
+                        Lessons = new List<LessonModel>()
+                        {
+                            GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
                         }
                     }
                 };

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="DuolingoClone.ContentViews.LessonGroupDivisorContentView">
+    <ContentView.Content>
+        <Grid
+            Margin="10,25"
+            ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView 
+                Style="{StaticResource Key=DivisorLine}"
+                Margin="0,30,0,0"
+                VerticalOptions="Center"
+                Grid.Column="0"/>
+            <FlexLayout
+                Grid.Column="1"
+                Direction="Row"
+                JustifyContent="Center"
+                AlignItems="Center"
+                HeightRequest="110"
+                BindableLayout.ItemsSource="{Binding Lessons}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image
+                                HeightRequest="80"
+                                WidthRequest="80"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Source="{Binding Icon}"/>
+                            <Label 
+                                Margin="0,30,0,0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Text="{Binding Level}"
+                                FontSize="Medium"
+                                TextColor="#CE8830"/>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+            <BoxView 
+                Style="{StaticResource Key=DivisorLine}"
+                Margin="0,30,0,0"
+                VerticalOptions="Center"
+                Grid.Column="2"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

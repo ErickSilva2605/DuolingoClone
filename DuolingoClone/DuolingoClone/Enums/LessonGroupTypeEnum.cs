@@ -8,6 +8,7 @@ namespace DuolingoClone.Enums
     {
         Single,
         Multi,
-        Bonus
+        Bonus,
+        Divisor
     }
 }

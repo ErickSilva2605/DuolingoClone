@@ -29,6 +29,13 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="White"/>
             </Style>
+
+            <Style x:Key="DivisorLine" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="2"/>
+                <Setter Property="BackgroundColor" Value="#DBDCDC"/>
+                <Setter Property="Margin" Value="0,15,0,15"/>
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
