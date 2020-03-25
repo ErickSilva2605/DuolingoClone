@@ -11,6 +11,7 @@
         <StackLayout
           Spacing="15">
             <Frame
+                BackgroundColor="{Binding Color}"
                 CornerRadius="45"
                 HasShadow="False"
                 BorderColor="#DBDCDC"

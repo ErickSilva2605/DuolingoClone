@@ -17,7 +17,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <BoxView
-                    BackgroundColor="{Binding Level, Converter={converters:LevelToColorConverter}}"
+                    BackgroundColor="{Binding Color}"
                     CornerRadius="50"/>
                 <Image
                     HeightRequest="60"

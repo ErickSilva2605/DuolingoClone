@@ -19,7 +19,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Single,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Introdução", "4", "lesson_egg")
+                            GetNewLesson("Introdução", "4", "lesson_egg", "#F19A37")
                         }
                      },
 
@@ -28,8 +28,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Saudações", "4", "lesson_dialog"),
-                            GetNewLesson("Viagem", string.Empty, "lesson_airplane")
+                            GetNewLesson("Saudações", "4", "lesson_dialog", "#F19A37"),
+                            GetNewLesson("Viagem", string.Empty, "lesson_airplane", "#C287F8")
                         }
                     },
 
@@ -38,8 +38,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Cafeteria", string.Empty, "lesson_hamburger"),
-                            GetNewLesson("Famílias", string.Empty, "lesson_baby")
+                            GetNewLesson("Cafeteria", string.Empty, "lesson_hamburger", "#C287F8"),
+                            GetNewLesson("Famílias", string.Empty, "lesson_baby", "#C287F8")
                         }
                     },
 
@@ -48,22 +48,23 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Bonus,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus"),
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus"),
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus")
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", "#FFFFFF"),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", "#FFFFFF"),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", "#FFFFFF")
                         }
                     }
                 };
             });
         }
 
-        private LessonModel GetNewLesson(string name, string level, string icon)
+        private LessonModel GetNewLesson(string name, string level, string icon, string color)
         {
             return new LessonModel
             {
                 Name = name,
-                Level= level,
-                Icon = icon
+                Level = level,
+                Icon = icon,
+                Color = color
             };
         }
     }
