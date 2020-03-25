@@ -42,7 +42,7 @@
             <Label 
               Text="{Binding Name}" 
               HorizontalTextAlignment="Center"
-              FontSize="24"/>
+              FontSize="18"/>
         </StackLayout>
   </ContentView.Content>
 </ContentView>

@@ -16,8 +16,8 @@
                 HasShadow="False"
                 BorderColor="#DBDCDC"
                 Padding="0"
-                WidthRequest="90"
-                HeightRequest="90"
+                WidthRequest="80"
+                HeightRequest="80"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <Image
@@ -29,7 +29,7 @@
             <Label 
               Text="{Binding Name}" 
               HorizontalTextAlignment="Center"
-              FontSize="24"/>
+              FontSize="18"/>
         </StackLayout>
     </ContentView.Content>
 </ContentView>
