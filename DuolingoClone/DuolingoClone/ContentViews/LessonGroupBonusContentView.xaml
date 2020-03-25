@@ -7,18 +7,31 @@
     xmlns:contentViews="clr-namespace:DuolingoClone.ContentViews"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.LessonGroupBonusContentView">
-  <ContentView.Content>
-        <FlexLayout
-            Direction="Row"
-            JustifyContent="Center"
-            AlignItems="Center"
-            HeightRequest="160"
-            BindableLayout.ItemsSource="{Binding Lessons}">
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <contentViews:LessonContetView/>
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="#DBDCDC"/>
+                <Setter Property="Margin" Value="0,15,0,15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+            <BoxView/>
+            <FlexLayout
+                Direction="Row"
+                JustifyContent="Center"
+                AlignItems="Center"
+                HeightRequest="160"
+                BindableLayout.ItemsSource="{Binding Lessons}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <contentViews:BonusContentView/>
+                    </DataTemplate>
+                 </BindableLayout.ItemTemplate>
         </FlexLayout>
+            <BoxView/>
+        </StackLayout>
     </ContentView.Content>
 </ContentView>

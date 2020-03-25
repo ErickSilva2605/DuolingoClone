@@ -6,43 +6,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converters="clr-namespace:DuolingoClone.Converters"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.ContentViews.LessonContetView"
+    x:Class="DuolingoClone.ContentViews.BonusContentView"
     Margin="15,0">
   <ContentView.Content>
-      <StackLayout
+        <StackLayout
           Spacing="15">
-            <Grid
+            <Frame
+                CornerRadius="45"
+                HasShadow="False"
+                BorderColor="#DBDCDC"
+                Padding="0"
                 WidthRequest="90"
                 HeightRequest="90"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
-                <BoxView
-                    BackgroundColor="{Binding Level, Converter={converters:LevelToColorConverter}}"
-                    CornerRadius="50"/>
                 <Image
                     HeightRequest="60"
                     WidthRequest="60"
                     HorizontalOptions="Center"
                     Source="{Binding Icon}"/>
-                <Grid
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
-                    Margin="0,0,-21,-9"
-                    HeightRequest="35">
-                    <Image
-                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"/>
-                    <Label
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        Text="{Binding Level}" 
-                        TextColor="#CE8830"
-                        FontSize="Medium"/>
-                </Grid>
-            </Grid>
+            </Frame>
             <Label 
               Text="{Binding Name}" 
               HorizontalTextAlignment="Center"
               FontSize="24"/>
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

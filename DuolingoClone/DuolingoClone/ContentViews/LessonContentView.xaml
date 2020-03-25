@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:DuolingoClone.Converters"
+    mc:Ignorable="d"
+    x:Class="DuolingoClone.ContentViews.LessonContentView"
+    Margin="15,0">
+  <ContentView.Content>
+      <StackLayout
+          Spacing="15">
+            <Grid
+                WidthRequest="90"
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <BoxView
+                    BackgroundColor="{Binding Level, Converter={converters:LevelToColorConverter}}"
+                    CornerRadius="50"/>
+                <Image
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    HorizontalOptions="Center"
+                    Source="{Binding Icon}"/>
+                <Grid
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    Margin="0,0,-21,-9"
+                    HeightRequest="35">
+                    <Image
+                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"/>
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Text="{Binding Level}" 
+                        TextColor="#CE8830"
+                        FontSize="Medium"/>
+                </Grid>
+            </Grid>
+            <Label 
+              Text="{Binding Name}" 
+              HorizontalTextAlignment="Center"
+              FontSize="24"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

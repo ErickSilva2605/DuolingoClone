@@ -16,7 +16,7 @@
             BindableLayout.ItemsSource="{Binding Lessons}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <contentViews:LessonContetView/>
+                    <contentViews:LessonContentView/>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </FlexLayout>

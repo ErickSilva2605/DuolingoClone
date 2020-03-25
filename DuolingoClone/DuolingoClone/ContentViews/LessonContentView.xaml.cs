@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace DuolingoClone.ContentViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LessonContetView : ContentView
+    public partial class LessonContentView : ContentView
     {
-        public LessonContetView()
+        public LessonContentView()
         {
             InitializeComponent();
         }
