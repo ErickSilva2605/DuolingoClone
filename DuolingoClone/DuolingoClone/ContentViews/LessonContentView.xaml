@@ -8,19 +8,19 @@
     xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.LessonContentView"
-    Margin="15,0">
+    Margin="5,0">
   <ContentView.Content>
       <StackLayout
-          Spacing="15">
+          Spacing="5">
             <Grid
-                WidthRequest="90"
-                HeightRequest="90"
+                WidthRequest="120"
+                HeightRequest="120"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
                 
                 <controls:CircularProgressBar
-                    WidthRequest="90"
-                    HeightRequest="90"
+                    WidthRequest="120"
+                    HeightRequest="120"
                     TrackColor="#E6E6E6"
                     ProgressColor="#F7CA45"
                     Progress="{Binding Progress}"
@@ -34,14 +34,14 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
                 <Image
-                    HeightRequest="60"
-                    WidthRequest="60"
+                    HeightRequest="50"
+                    WidthRequest="50"
                     HorizontalOptions="Center"
                     Source="{Binding Icon}"/>
                 <Grid
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    Margin="0,0,-21,-9"
+                    Margin="0,0,-5,5"
                     HeightRequest="35">
                     <Image
                         Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"/>

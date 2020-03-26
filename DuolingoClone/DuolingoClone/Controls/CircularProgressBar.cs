@@ -25,7 +25,7 @@ namespace DuolingoClone.Controls
                 nameof(Progress),
                 typeof(double),
                 typeof(CircularProgressBar),
-                0,0
+                0.0
             );
 
         public Color TrackColor

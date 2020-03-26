@@ -9,6 +9,7 @@
     x:Class="DuolingoClone.ContentViews.LessonGroupSingleContentView">
   <ContentView.Content>
         <FlexLayout
+            Margin="0,0,0,10"
             Direction="Row"
             JustifyContent="Center"
             AlignItems="Center"
