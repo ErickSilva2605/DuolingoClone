@@ -20,7 +20,9 @@
                 
                 <controls:CircularProgressBar
                     WidthRequest="90"
-                    HeightRequest="90"/>
+                    HeightRequest="90"
+                    TrackColor="#E6E6E6"
+                    ProgressColor="Blue"/>
                 
                 <BoxView
                     BackgroundColor="{Binding Color}"

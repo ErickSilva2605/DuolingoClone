@@ -19,12 +19,19 @@ namespace DuolingoClone.iOS.Renderers
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
+            if (Element is null)
+                return;
+
+            if (Control is null)
             {
                 var nativeControl = new CircularProgressBarIOS(
                     Element.WidthRequest,
-                    Element.HeightRequest
+                    Element.HeightRequest,
+                    Element.TrackColor.ToCGColor(),
+                    Element.ProgressColor.ToCGColor(),
+                    Element.Progress
                 );
+
                 SetNativeControl(nativeControl);
             }
         }

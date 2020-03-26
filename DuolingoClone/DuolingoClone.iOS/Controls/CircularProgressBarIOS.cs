@@ -11,15 +11,15 @@ namespace DuolingoClone.iOS.Controls
 {
     public class CircularProgressBarIOS : UIView
     {
-        private CAShapeLayer progressLyr = new CAShapeLayer();
-        private CAShapeLayer trackLyr = new CAShapeLayer();
+        private CAShapeLayer _progressLayer = new CAShapeLayer();
+        private CAShapeLayer _trackLayer = new CAShapeLayer();
 
-        public CircularProgressBarIOS(double width, double height)
+        public CircularProgressBarIOS(double width, double height, CGColor trackColor, CGColor progressColor, double progress)
         {
-            makeCircularPath((nfloat)width, (nfloat)height);
+            MakeCircularPath((nfloat)width, (nfloat)height, trackColor, progressColor, (nfloat)progress);
         }
 
-        private void makeCircularPath(nfloat width, nfloat height)
+        private void MakeCircularPath(nfloat width, nfloat height, CGColor trackColor, CGColor progressColor, nfloat progress)
         {
             BackgroundColor = UIColor.Clear;
             Layer.CornerRadius = (width / 2);
@@ -33,21 +33,21 @@ namespace DuolingoClone.iOS.Controls
                 clockWise: true
             );
 
-            trackLyr.Path = circlePath.CGPath;
-            trackLyr.FillColor = UIColor.Clear.CGColor;
-            trackLyr.StrokeColor = UIColor.Blue.CGColor;
-            trackLyr.LineWidth = (nfloat)5.0;
-            trackLyr.StrokeEnd = (nfloat)1.0;
+            _trackLayer.Path = circlePath.CGPath;
+            _trackLayer.FillColor = UIColor.Clear.CGColor;
+            _trackLayer.StrokeColor = trackColor;
+            _trackLayer.LineWidth = (nfloat)5.0;
+            _trackLayer.StrokeEnd = (nfloat)1.0;
 
-            Layer.AddSublayer(trackLyr);
+            Layer.AddSublayer(_trackLayer);
 
-            progressLyr.Path = circlePath.CGPath;
-            progressLyr.FillColor = UIColor.Clear.CGColor;
-            progressLyr.StrokeColor = UIColor.Red.CGColor;
-            progressLyr.LineWidth = (nfloat)5.0;
-            progressLyr.StrokeEnd = (nfloat)0.2;
+            _progressLayer.Path = circlePath.CGPath;
+            _progressLayer.FillColor = UIColor.Clear.CGColor;
+            _progressLayer.StrokeColor = progressColor;
+            _progressLayer.LineWidth = (nfloat)5.0;
+            _progressLayer.StrokeEnd = progress;
 
-            Layer.AddSublayer(progressLyr);
+            Layer.AddSublayer(_progressLayer);
         }
     }
 }
