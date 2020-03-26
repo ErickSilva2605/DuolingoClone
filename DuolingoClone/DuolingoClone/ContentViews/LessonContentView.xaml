@@ -5,6 +5,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converters="clr-namespace:DuolingoClone.Converters"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.LessonContentView"
     Margin="15,0">
@@ -16,9 +17,18 @@
                 HeightRequest="90"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
+                
+                <controls:CircularProgressBar
+                    WidthRequest="90"
+                    HeightRequest="90"/>
+                
                 <BoxView
                     BackgroundColor="{Binding Color}"
-                    CornerRadius="50"/>
+                    CornerRadius="45"
+                    WidthRequest="90"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
                 <Image
                     HeightRequest="60"
                     WidthRequest="60"

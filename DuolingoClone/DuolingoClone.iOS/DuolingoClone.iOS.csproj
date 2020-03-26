@@ -62,8 +62,10 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\CircularProgressBarIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\CircularProgressBarRenderer.cs" />
     <Compile Include="Renderers\CustomNavigationPageRenderer.cs" />
     <Compile Include="Renderers\CustomTabbedPageRenderer.cs" />
     <None Include="Entitlements.plist" />
