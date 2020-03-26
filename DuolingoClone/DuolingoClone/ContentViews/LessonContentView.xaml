@@ -22,7 +22,9 @@
                     WidthRequest="90"
                     HeightRequest="90"
                     TrackColor="#E6E6E6"
-                    ProgressColor="Blue"/>
+                    ProgressColor="#F7CA45"
+                    Progress="{Binding Progress}"
+                    Rotation="135"/>
                 
                 <BoxView
                     BackgroundColor="{Binding Color}"

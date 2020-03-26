@@ -27,7 +27,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Single,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Introdução", "5", "lesson_egg", _colorLevel5)
+                            GetNewLesson("Introdução", "5", "lesson_egg", _colorLevel5, 1.0)
                         }
                      },
 
@@ -36,8 +36,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Saudações", "4", "lesson_dialog", _colorLevel4),
-                            GetNewLesson("Viagem", "3", "lesson_airplane", _colorLevel3)
+                            GetNewLesson("Saudações", "4", "lesson_dialog", _colorLevel4, 0.8),
+                            GetNewLesson("Viagem", "3", "lesson_airplane", _colorLevel3, 0.0)
                         }
                     },
 
@@ -46,8 +46,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Cafeteria", "2", "lesson_hamburger", _colorLevel2),
-                            GetNewLesson("Famílias", "1", "lesson_baby", _colorLevel1)
+                            GetNewLesson("Cafeteria", "2", "lesson_hamburger", _colorLevel2, 0.4),
+                            GetNewLesson("Famílias", "1", "lesson_baby", _colorLevel1, 0.7)
                         }
                     },
 
@@ -56,9 +56,9 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Bonus,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus),
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus),
-                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus)
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus, 0.0),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus, 0.0),
+                            GetNewLesson("Bônus", string.Empty, "lesson_plus", _colorBonus, 0.0)
                         }
                     },
 
@@ -67,9 +67,9 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Loja", string.Empty, "lesson_sock", _colorLevel0),
-                            GetNewLesson("Estudos", "1", "lesson_pencil", _colorLevel1),
-                            GetNewLesson("Ocupações", "3", "lesson_hat", _colorLevel3)
+                            GetNewLesson("Loja", string.Empty, "lesson_sock", _colorLevel0, 0.5),
+                            GetNewLesson("Estudos", "1", "lesson_pencil", _colorLevel1, 1.0),
+                            GetNewLesson("Ocupações", "3", "lesson_hat", _colorLevel3, 0.3)
                         }
                     },
 
@@ -78,7 +78,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Single,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Encontros", string.Empty, "lesson_bag", _colorLevel0)
+                            GetNewLesson("Encontros", string.Empty, "lesson_bag", _colorLevel0, 0.0)
                         }
                     },
 
@@ -87,7 +87,7 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Divisor,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson(string.Empty, "1", "lesson_divisor_castle", string.Empty)
+                            GetNewLesson(string.Empty, "1", "lesson_divisor_castle", string.Empty, 0.0)
                         }
                     },
 
@@ -96,8 +96,8 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Multi,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson("Rotinas", "1", "lesson_bike", _colorLevel1),
-                            GetNewLesson("Emoções", string.Empty, "lesson_heart", _colorLevel0)
+                            GetNewLesson("Rotinas", "1", "lesson_bike", _colorLevel1, 0.1),
+                            GetNewLesson("Emoções", string.Empty, "lesson_heart", _colorLevel0, 0.9)
                         }
                     },
 
@@ -106,21 +106,23 @@ namespace DuolingoClone.Fakes
                         Type = LessonGroupTypeEnum.Divisor,
                         Lessons = new List<LessonModel>()
                         {
-                            GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
+                            GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty, 0.0)
                         }
                     }
                 };
             });
         }
 
-        private LessonModel GetNewLesson(string name, string level, string icon, string color)
+        private LessonModel GetNewLesson(string name, string level, string icon, string color, double progress)
         {
             return new LessonModel
             {
                 Name = name,
                 Level = level,
                 Icon = icon,
-                Color = color
+                Color = color,
+                Progress = progress
+                
             };
         }
     }
