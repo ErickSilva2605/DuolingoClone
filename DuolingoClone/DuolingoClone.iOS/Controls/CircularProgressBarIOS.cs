@@ -36,7 +36,7 @@ namespace DuolingoClone.iOS.Controls
             _trackLayer.Path = circlePath.CGPath;
             _trackLayer.FillColor = UIColor.Clear.CGColor;
             _trackLayer.StrokeColor = trackColor;
-            _trackLayer.LineWidth = (nfloat)5.0;
+            _trackLayer.LineWidth = (nfloat)8.0;
             _trackLayer.StrokeEnd = (nfloat)1.0;
 
             Layer.AddSublayer(_trackLayer);
@@ -44,7 +44,7 @@ namespace DuolingoClone.iOS.Controls
             _progressLayer.Path = circlePath.CGPath;
             _progressLayer.FillColor = UIColor.Clear.CGColor;
             _progressLayer.StrokeColor = progressColor;
-            _progressLayer.LineWidth = (nfloat)5.0;
+            _progressLayer.LineWidth = (nfloat)8.0;
             _progressLayer.StrokeEnd = progress;
 
             Layer.AddSublayer(_progressLayer);

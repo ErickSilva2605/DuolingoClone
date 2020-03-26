@@ -29,8 +29,8 @@
                 <BoxView
                     BackgroundColor="{Binding Color}"
                     CornerRadius="45"
-                    WidthRequest="90"
-                    HeightRequest="90"
+                    WidthRequest="80"
+                    HeightRequest="80"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
                 <Image
