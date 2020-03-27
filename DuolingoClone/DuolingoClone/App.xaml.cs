@@ -30,6 +30,7 @@ namespace DuolingoClone
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<LessonsView, LessonsViewModel>();
+            containerRegistry.RegisterForNavigation<StoriesView>();
             containerRegistry.RegisterForNavigation<TrainingView, TrainingViewModel>();
             containerRegistry.RegisterForNavigation<ProfileView, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<RankingView, RankingViewModel>();

@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using TabbedPage = Xamarin.Forms.TabbedPage;
 
 namespace DuolingoClone.Views
 {
@@ -18,7 +21,11 @@ namespace DuolingoClone.Views
         {
             InitializeComponent();
 
+            On<Android>().DisableSmoothScroll();
+            On<Android>().DisableSwipePaging();
+
             Children.Add(new LessonsView());
+            Children.Add(new StoriesView());
 
             if(Device.RuntimePlatform == Device.iOS)
                 Children.Add(new TrainingView());
