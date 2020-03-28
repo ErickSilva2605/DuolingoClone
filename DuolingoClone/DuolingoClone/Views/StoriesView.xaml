@@ -6,9 +6,85 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     x:Class="DuolingoClone.Views.StoriesView">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Stories view"/>
-        </StackLayout>
+        <CollectionView
+            ItemsSource="{Binding Stories}"
+            IsGrouped="True">
+            <CollectionView.Header>
+                <Grid
+                    Padding="0,20,0,0"
+                    RowSpacing="10"
+                    HeightRequest="180">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Margin="30,0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="End"
+                        Text="Duolingo Histórias"
+                        FontSize="30"/>
+                    <Label
+                        Grid.Row="1"
+                        Margin="80,0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Text="Melhore sua leitura e escuta com Histórias curtas!"
+                        FontSize="Medium"
+                        FontFamily="{StaticResource FontRegular}"
+                        TextColor="{StaticResource SubTitleColor}"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid
+                        Padding="0,0,0,10"
+                        ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <BoxView 
+                            Style="{StaticResource Key=DivisorLine}"
+                            VerticalOptions="Center"
+                            Grid.Column="0"/>
+                        <Label
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Name}"
+                            FontSize="Medium"
+                            Grid.Column="1"/>
+                        <BoxView 
+                            Style="{StaticResource Key=DivisorLine}"
+                            VerticalOptions="Center"
+                            Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout 
+                    Orientation="Vertical"
+                    Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout
+                        HeightRequest="200"
+                        WidthRequest="180">
+                        <Image
+                            WidthRequest="160"
+                            HeightRequest="160"
+                            Source="{Binding Image}"/>
+                        <Label 
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Name}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

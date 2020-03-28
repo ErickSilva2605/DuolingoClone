@@ -14,16 +14,22 @@ namespace DuolingoClone.Fakes
         private readonly string _storieBreadImage = "stories_bread";
         private readonly string _storieGiftImage = "stories_gift";
 
-        public async Task<IList<StoriesModel>> GetStories()
+        public async Task<IList<StoriesGroupModel>> GetStories()
         {
             return await Task.Run(() => 
-            { 
-                return new List<StoriesModel>()
+            {
+                return new List<StoriesGroupModel>
                 {
-                    GetNewStories("Bom dia!", _storieCoffeImage),
-                    GetNewStories("Um encontro", _storieCandleImage),
-                    GetNewStories("Uma coisa", _storieBreadImage),
-                    GetNewStories("Surpresa", _storieGiftImage)
+                    new StoriesGroupModel(
+                        "Série 1",
+                        new List<StoriesModel>()
+                        {
+                            GetNewStories("Bom dia!", _storieCoffeImage),
+                            GetNewStories("Um encontro", _storieCandleImage),
+                            GetNewStories("Uma coisa", _storieBreadImage),
+                            GetNewStories("Surpresa", _storieGiftImage)
+                        }
+                    )
                 };
             });
         }

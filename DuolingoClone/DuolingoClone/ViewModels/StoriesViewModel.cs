@@ -13,7 +13,7 @@ namespace DuolingoClone.ViewModels
     public class StoriesViewModel : ViewModelBase, IActiveAware
     {
         private readonly IStoriesService _storiesService;
-        public ObservableCollection<StoriesModel> Stories { get; private set; }
+        public ObservableCollection<StoriesGroupModel> Stories { get; private set; }
 
         private bool _isActive;
         public bool IsActive 
@@ -25,7 +25,7 @@ namespace DuolingoClone.ViewModels
         public StoriesViewModel(IStoriesService storiesService)
         {
             _storiesService = storiesService;
-            Stories = new ObservableCollection<StoriesModel>();
+            Stories = new ObservableCollection<StoriesGroupModel>();
         }
 
         public event EventHandler IsActiveChanged;
@@ -34,17 +34,17 @@ namespace DuolingoClone.ViewModels
         {
             if (IsActive)
             {
-                var stories = await GetStories();
+                var groupsStories = await GetStories();
 
                 if (Stories.Any())
                     Stories.Clear();
 
-                foreach (var storie in stories)
-                    Stories.Add(storie);
+                foreach (var storieGroup in groupsStories)
+                    Stories.Add(storieGroup);
             }
         }
 
-        private async Task<IList<StoriesModel>> GetStories()
+        private async Task<IList<StoriesGroupModel>> GetStories()
         {
             return await _storiesService.GetStories();
         }

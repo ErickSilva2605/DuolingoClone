@@ -8,6 +8,6 @@ namespace DuolingoClone.Interfaces
 {
     public interface IStoriesService
     {
-        Task<IList<StoriesModel>> GetStories();
+        Task<IList<StoriesGroupModel>> GetStories();
     }
 }
