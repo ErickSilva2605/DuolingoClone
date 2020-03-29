@@ -39,12 +39,6 @@ namespace DuolingoClone.Droid.Renderers
                 var relativeLayout = base.GetChildAt(0) as Android.Widget.RelativeLayout;
                 PagerLayout = relativeLayout.GetChildAt(0) as ViewPager;
 
-                if (PagerLayout != null)
-                {
-                    var propertyInfo = PagerLayout.GetType().GetProperty("EnableGesture");
-                    propertyInfo.SetValue(PagerLayout, false, null);
-                }
-
                 _bottomNavigationView = relativeLayout.GetChildAt(1) as BottomNavigationView;
                 _bottomNavigationView.ItemIconTintList = null;
                 _bottomNavigationView.ItemIconSize = _iconSize;
