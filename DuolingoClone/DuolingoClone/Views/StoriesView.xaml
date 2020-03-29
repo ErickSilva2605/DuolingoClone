@@ -72,16 +72,36 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout
-                        HeightRequest="200"
-                        WidthRequest="180">
-                        <Image
-                            WidthRequest="160"
-                            HeightRequest="160"
-                            Source="{Binding Image}"/>
-                        <Label 
+                    <StackLayout HeightRequest="200" WidthRequest="200">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <BoxView
+                                BackgroundColor="{Binding ShadowBottomColor}"
+                                CornerRadius="18"
+                                HeightRequest="118"
+                                HorizontalOptions="Center"
+                                TranslationY="-5"
+                                VerticalOptions="End"
+                                WidthRequest="118" />
+
+                            <StackLayout
+                                    HeightRequest="140"
+                                    WidthRequest="140"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End">
+                                <ImageButton
+                                    Source="{Binding Image}"
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="140"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End"
+                                    WidthRequest="140" />
+                            </StackLayout>
+                        </Grid>
+
+                        <Label
+                            FontSize="24"
                             HorizontalTextAlignment="Center"
-                            Text="{Binding Name}"/>
+                            Text="{Binding Name}" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

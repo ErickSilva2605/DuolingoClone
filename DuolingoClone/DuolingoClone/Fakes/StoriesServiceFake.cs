@@ -24,22 +24,23 @@ namespace DuolingoClone.Fakes
                         "Série 1",
                         new List<StoriesModel>()
                         {
-                            GetNewStories("Bom dia!", _storieCoffeImage),
-                            GetNewStories("Um encontro", _storieCandleImage),
-                            GetNewStories("Uma coisa", _storieBreadImage),
-                            GetNewStories("Surpresa", _storieGiftImage)
+                            GetNewStories("Bom dia!", _storieCoffeImage, "#F5B43F"),
+                            GetNewStories("Um encontro", _storieCandleImage, "#503322"),
+                            GetNewStories("Uma coisa", _storieBreadImage, "#68AD33"),
+                            GetNewStories("Surpresa", _storieGiftImage, "#DE90D0")
                         }
                     )
                 };
             });
         }
 
-        private StoriesModel GetNewStories(string name, string image)
+        private StoriesModel GetNewStories(string name, string image, string shadowBottomColor)
         { 
             return new StoriesModel
             {
                 Name = name,
-                Image = image
+                Image = image,
+                ShadowBottomColor = shadowBottomColor
             };
         }
     }

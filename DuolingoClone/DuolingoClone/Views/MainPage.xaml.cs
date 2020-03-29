@@ -27,8 +27,8 @@ namespace DuolingoClone.Views
             Children.Add(new LessonsView());
             Children.Add(new StoriesView());
 
-            if(Device.RuntimePlatform == Device.iOS)
-                Children.Add(new TrainingView());
+            //if(Device.RuntimePlatform == Device.iOS)
+            //    Children.Add(new TrainingView());
 
             Children.Add(new ProfileView());
             Children.Add(new RankingView());
