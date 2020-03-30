@@ -25,6 +25,9 @@
                 iOS="DINNextRoundedLTPro-Regular"
                 />
 
+            <Color x:Key="TitleColor">
+                #4B4C4B
+            </Color>
             <Color x:Key="SubTitleColor">
                 #828282
             </Color>
@@ -37,6 +40,7 @@
 
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource FontBold}" />
+                <Setter Property="TextColor" Value="{StaticResource TitleColor}" />
             </Style>
 
             <Style TargetType="NavigationPage">
