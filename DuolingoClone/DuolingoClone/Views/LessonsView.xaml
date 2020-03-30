@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     >
     <ContentPage.Content>
-        <AbsoluteLayout>
+        <AbsoluteLayout Margin="{OnPlatform Android=0, iOS='0,0,0,66'}">
             <ScrollView AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
 
                 <FlexLayout
