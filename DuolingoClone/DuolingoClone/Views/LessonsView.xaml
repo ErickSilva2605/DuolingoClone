@@ -11,10 +11,7 @@
     >
     <ContentPage.Content>
         <AbsoluteLayout>
-            <ScrollView
-                AbsoluteLayout.LayoutBounds="1,1,1,1"
-                AbsoluteLayout.LayoutFlags="All"
-                >
+            <ScrollView AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
 
                 <FlexLayout
                     BindableLayout.ItemTemplateSelector="{templates:LessonGroupDataTemplateSelector}"

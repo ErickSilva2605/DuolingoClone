@@ -10,10 +10,7 @@
     >
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style
-                x:Key="SectionLabel"
-                TargetType="Label"
-                >
+            <Style x:Key="SectionLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
@@ -21,17 +18,13 @@
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup>
-                            <VisualState
-                                x:Name="Selected"
-                                >
+                            <VisualState x:Name="Selected">
                                 <VisualState.Setters>
                                     <Setter Property="TextColor" Value="#4FADEF" />
                                 </VisualState.Setters>
                             </VisualState>
 
-                            <VisualState
-                                x:Name="UnSelected"
-                                >
+                            <VisualState x:Name="UnSelected">
                                 <VisualState.Setters>
                                     <Setter Property="TextColor" Value="#AFAFAE" />
                                 </VisualState.Setters>
@@ -41,26 +34,19 @@
                 </Setter>
             </Style>
 
-            <Style
-                x:Key="SectionBoxView"
-                TargetType="BoxView"
-                >
+            <Style x:Key="SectionBoxView" TargetType="BoxView">
                 <Setter Property="HeightRequest" Value="10" />
 
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup>
-                            <VisualState
-                                x:Name="Selected"
-                                >
+                            <VisualState x:Name="Selected">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="#4FADEF" />
                                 </VisualState.Setters>
                             </VisualState>
 
-                            <VisualState
-                                x:Name="UnSelected"
-                                >
+                            <VisualState x:Name="UnSelected">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="#AFAFAE" />
                                 </VisualState.Setters>
@@ -73,19 +59,11 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid
-            RowSpacing="0"
-            >
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="150"
-                    />
-                <RowDefinition
-                    Height="50"
-                    />
-                <RowDefinition
-                    Height="*"
-                    />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <StackLayout
@@ -102,9 +80,7 @@
                     VerticalOptions="Center"
                     WidthRequest="80"
                     >
-                    <Image
-                        Source="profile_user"
-                        />
+                    <Image Source="profile_user" />
                 </Frame>
                 <Label
                     FontSize="Medium"
@@ -126,18 +102,12 @@
                     RowSpacing="0"
                     >
                     <Grid.RowDefinitions>
-                        <RowDefinition
-                            Height="*"
-                            />
-                        <RowDefinition
-                            Height="3"
-                            />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="3" />
                     </Grid.RowDefinitions>
 
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="OnTappedSection"
-                            />
+                        <TapGestureRecognizer Tapped="OnTappedSection" />
                     </Grid.GestureRecognizers>
 
                     <Label
@@ -146,10 +116,7 @@
                         Text="CONQUISTAS"
                         />
 
-                    <BoxView
-                        Grid.Row="1"
-                        Style="{StaticResource SectionBoxView}"
-                        />
+                    <BoxView Grid.Row="1" Style="{StaticResource SectionBoxView}" />
                 </Grid>
 
                 <Grid
@@ -158,18 +125,12 @@
                     RowSpacing="0"
                     >
                     <Grid.RowDefinitions>
-                        <RowDefinition
-                            Height="*"
-                            />
-                        <RowDefinition
-                            Height="3"
-                            />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="3" />
                     </Grid.RowDefinitions>
 
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="OnTappedSection"
-                            />
+                        <TapGestureRecognizer Tapped="OnTappedSection" />
                     </Grid.GestureRecognizers>
 
                     <Label
@@ -178,10 +139,7 @@
                         Text="AMIGOS"
                         />
 
-                    <BoxView
-                        Grid.Row="1"
-                        Style="{StaticResource SectionBoxView}"
-                        />
+                    <BoxView Grid.Row="1" Style="{StaticResource SectionBoxView}" />
                 </Grid>
 
             </FlexLayout>

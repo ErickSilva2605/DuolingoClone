@@ -11,9 +11,7 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <StackLayout
-            Spacing="5"
-            >
+        <StackLayout Spacing="5">
             <Grid
                 HeightRequest="120"
                 HorizontalOptions="Center"
@@ -50,9 +48,7 @@
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     >
-                    <Image
-                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"
-                        />
+                    <Image Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}" />
                     <Label
                         FontSize="Medium"
                         HorizontalTextAlignment="Center"

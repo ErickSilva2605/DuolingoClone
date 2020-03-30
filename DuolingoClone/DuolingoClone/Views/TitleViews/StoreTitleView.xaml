@@ -8,20 +8,11 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <Grid
-            Margin="{OnPlatform Android='0,0,15,0',
-                                iOS=0}"
-            >
+        <Grid Margin="{OnPlatform Android='0,0,15,0', iOS=0}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition
-                    Width="*"
-                    />
-                <ColumnDefinition
-                    Width="*"
-                    />
-                <ColumnDefinition
-                    Width="*"
-                    />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label
                 Grid.Column="1"

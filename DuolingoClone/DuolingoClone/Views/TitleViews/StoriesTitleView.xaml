@@ -15,18 +15,10 @@
             Direction="Row"
             JustifyContent="SpaceBetween"
             >
-            <Image
-                HeightRequest="30"
-                Source="navbar_english.png"
-                />
+            <Image HeightRequest="30" Source="navbar_english.png" />
 
-            <StackLayout
-                Orientation="Horizontal"
-                >
-                <Image
-                    HeightRequest="30"
-                    Source="navbar_crown.png"
-                    />
+            <StackLayout Orientation="Horizontal">
+                <Image HeightRequest="30" Source="navbar_crown.png" />
                 <Label
                     FontAttributes="Bold"
                     Text="74"
@@ -35,13 +27,8 @@
                     />
             </StackLayout>
 
-            <StackLayout
-                Orientation="Horizontal"
-                >
-                <Image
-                    HeightRequest="30"
-                    Source="navbar_fire.png"
-                    />
+            <StackLayout Orientation="Horizontal">
+                <Image HeightRequest="30" Source="navbar_fire.png" />
                 <Label
                     FontAttributes="Bold"
                     Text="0"
@@ -50,13 +37,8 @@
                     />
             </StackLayout>
 
-            <StackLayout
-                Orientation="Horizontal"
-                >
-                <Image
-                    HeightRequest="30"
-                    Source="navbar_heart.png"
-                    />
+            <StackLayout Orientation="Horizontal">
+                <Image HeightRequest="30" Source="navbar_heart.png" />
                 <Label
                     FontAttributes="Bold"
                     Text="4"

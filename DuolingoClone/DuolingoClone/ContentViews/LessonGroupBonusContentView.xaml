@@ -9,12 +9,8 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <StackLayout
-            Margin="10,0,10,0"
-            >
-            <BoxView
-                Style="{StaticResource DivisorLine}"
-                />
+        <StackLayout Margin="10,0,10,0">
+            <BoxView Style="{StaticResource DivisorLine}" />
             <FlexLayout
                 AlignItems="Center"
                 BindableLayout.ItemsSource="{Binding Lessons}"
@@ -28,9 +24,7 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </FlexLayout>
-            <BoxView
-                Style="{StaticResource DivisorLine}"
-                />
+            <BoxView Style="{StaticResource DivisorLine}" />
         </StackLayout>
     </ContentView.Content>
 </ContentView>

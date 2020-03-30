@@ -19,16 +19,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <FlexLayout
-                                Padding="20"
-                                >
-                                <Grid
-                                    FlexLayout.Basis="200"
-                                    HeightRequest="130"
-                                    >
-                                    <Image
-                                        Source="{Binding Icon}"
-                                        />
+                            <FlexLayout Padding="20">
+                                <Grid FlexLayout.Basis="200" HeightRequest="130">
+                                    <Image Source="{Binding Icon}" />
 
                                     <Label
                                         FontSize="18"
@@ -65,12 +58,8 @@
                                         VerticalOptions="CenterAndExpand"
                                         >
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition
-                                                Width="*"
-                                                />
-                                            <ColumnDefinition
-                                                Width="Auto"
-                                                />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
                                         <controls:HorizontalProgressBar

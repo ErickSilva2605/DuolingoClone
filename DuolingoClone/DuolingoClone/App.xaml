@@ -25,61 +25,40 @@
                 iOS="DINNextRoundedLTPro-Regular"
                 />
 
-            <Color
-                x:Key="SubTitleColor"
-                >
+            <Color x:Key="SubTitleColor">
                 #828282
             </Color>
-            <Color
-                x:Key="TrackColor"
-                >
+            <Color x:Key="TrackColor">
                 #E6E6E6
             </Color>
-            <Color
-                x:Key="ProgressColor"
-                >
+            <Color x:Key="ProgressColor">
                 #F7CA45
             </Color>
 
-            <Style
-                TargetType="Label"
-                >
+            <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource FontBold}" />
             </Style>
 
-            <Style
-                TargetType="NavigationPage"
-                >
+            <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="White" />
             </Style>
 
-            <Style
-                x:Key="DivisorLine"
-                TargetType="BoxView"
-                >
+            <Style x:Key="DivisorLine" TargetType="BoxView">
                 <Setter Property="HeightRequest" Value="2" />
                 <Setter Property="BackgroundColor" Value="#DBDCDC" />
                 <Setter Property="Margin" Value="0,15,0,15" />
             </Style>
 
-            <Style
-                TargetType="ImageButton"
-                >
+            <Style TargetType="ImageButton">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
-                        <VisualStateGroup
-                            x:Name="CommonState"
-                            >
-                            <VisualState
-                                x:Name="Normal"
-                                >
+                        <VisualStateGroup x:Name="CommonState">
+                            <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="TranslationY" Value="-8" />
                                 </VisualState.Setters>
                             </VisualState>
-                            <VisualState
-                                x:Name="Pressed"
-                                >
+                            <VisualState x:Name="Pressed">
                                 <VisualState.Setters>
                                     <Setter Property="TranslationY" Value="0" />
                                 </VisualState.Setters>

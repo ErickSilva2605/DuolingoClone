@@ -9,9 +9,7 @@
     >
     <ContentView.Content>
         <StackLayout>
-            <Label
-                Text="Friends"
-                />
+            <Label Text="Friends" />
         </StackLayout>
     </ContentView.Content>
 </ContentView>

@@ -9,9 +9,7 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <StackLayout
-            Spacing="15"
-            >
+        <StackLayout Spacing="15">
             <Frame
                 Padding="0"
                 BackgroundColor="{Binding Color}"
