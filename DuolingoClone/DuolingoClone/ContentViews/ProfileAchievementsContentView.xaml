@@ -1,59 +1,76 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.ContentViews.ProfileAchievementsContentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.ContentViews.ProfileAchievementsContentView">
-  <ContentView.Content>
+    >
+    <ContentView.Content>
         <ListView
             CachingStrategy="RecycleElement"
             HasUnevenRows="True"
             ItemsSource="{Binding Achievements}"
-            SeparatorVisibility="None">
+            SeparatorVisibility="None"
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <FlexLayout Padding="20">
-                                <Grid FlexLayout.Basis="200" HeightRequest="130">
-                                    <Image Source="{Binding Icon}" />
+                            <FlexLayout
+                                Padding="20"
+                                >
+                                <Grid
+                                    FlexLayout.Basis="200"
+                                    HeightRequest="130"
+                                    >
+                                    <Image
+                                        Source="{Binding Icon}"
+                                        />
 
-                                        <!--TextColor="{Binding IsActive, Converter={converters:AchievementsActiveToTextColorConverter}}"-->
                                     <Label
                                         FontSize="18"
                                         HorizontalTextAlignment="Center"
                                         Text="{Binding Level}"
                                         TranslationY="-20"
-                                        VerticalTextAlignment="End" />
+                                        VerticalTextAlignment="End"
+                                        />
                                 </Grid>
 
                                 <FlexLayout
                                     Margin="20,0,0,0"
                                     Direction="Column"
                                     FlexLayout.Basis="100%"
-                                    JustifyContent="SpaceEvenly">
+                                    JustifyContent="SpaceEvenly"
+                                    >
                                     <Label
                                         FontSize="24"
                                         Text="{Binding Name}"
-                                        VerticalOptions="CenterAndExpand" />
+                                        VerticalOptions="CenterAndExpand"
+                                        />
 
                                     <Label
                                         FontFamily="{StaticResource FontRegular}"
                                         FontSize="20"
                                         Text="{Binding Description}"
                                         TextColor="#777777"
-                                        VerticalOptions="CenterAndExpand" />
+                                        VerticalOptions="CenterAndExpand"
+                                        />
 
                                     <Grid
                                         ColumnSpacing="20"
                                         IsVisible="{Binding IsActive}"
-                                        VerticalOptions="CenterAndExpand">
+                                        VerticalOptions="CenterAndExpand"
+                                        >
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition
+                                                Width="*"
+                                                />
+                                            <ColumnDefinition
+                                                Width="Auto"
+                                                />
                                         </Grid.ColumnDefinitions>
 
                                         <controls:HorizontalProgressBar
@@ -62,14 +79,16 @@
                                             Progress="{Binding Progress}"
                                             ProgressColor="{StaticResource ProgressColor}"
                                             TrackColor="{StaticResource TrackColor}"
-                                            VerticalOptions="Center" />
+                                            VerticalOptions="Center"
+                                            />
 
                                         <Label
                                             Grid.Column="1"
                                             FontSize="18"
                                             Text="{Binding Status}"
                                             TextColor="#AFAFAE"
-                                            VerticalOptions="Center" />
+                                            VerticalOptions="Center"
+                                            />
                                     </Grid>
                                 </FlexLayout>
                             </FlexLayout>
@@ -78,5 +97,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

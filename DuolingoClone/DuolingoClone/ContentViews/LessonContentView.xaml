@@ -1,62 +1,72 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.ContentViews.LessonContentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
+    xmlns:converters="clr-namespace:DuolingoClone.Converters"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:converters="clr-namespace:DuolingoClone.Converters"
-    xmlns:controls="clr-namespace:DuolingoClone.Controls"
+    Margin="5,0"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.ContentViews.LessonContentView"
-    Margin="5,0">
-  <ContentView.Content>
-      <StackLayout
-          Spacing="5">
+    >
+    <ContentView.Content>
+        <StackLayout
+            Spacing="5"
+            >
             <Grid
-                WidthRequest="120"
                 HeightRequest="120"
                 HorizontalOptions="Center"
-                VerticalOptions="Center">
-                
+                VerticalOptions="Center"
+                WidthRequest="120"
+                >
+
                 <controls:CircularProgressBar
-                    WidthRequest="120"
                     HeightRequest="120"
-                    TrackColor="{StaticResource TrackColor}"
-                    ProgressColor="{StaticResource ProgressColor}"
                     Progress="{Binding Progress}"
-                    Rotation="135"/>
-                
+                    ProgressColor="{StaticResource ProgressColor}"
+                    Rotation="135"
+                    TrackColor="{StaticResource TrackColor}"
+                    WidthRequest="120"
+                    />
+
                 <BoxView
                     BackgroundColor="{Binding Color}"
                     CornerRadius="45"
-                    WidthRequest="80"
                     HeightRequest="80"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"
+                    WidthRequest="80"
+                    />
                 <Image
                     HeightRequest="50"
-                    WidthRequest="50"
                     HorizontalOptions="Center"
-                    Source="{Binding Icon}"/>
+                    Source="{Binding Icon}"
+                    WidthRequest="50"
+                    />
                 <Grid
+                    Margin="0,0,-5,5"
+                    HeightRequest="35"
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    Margin="0,0,-5,5"
-                    HeightRequest="35">
+                    >
                     <Image
-                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"/>
+                        Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"
+                        />
                     <Label
+                        FontSize="Medium"
                         HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        Text="{Binding Level}" 
+                        Text="{Binding Level}"
                         TextColor="#CE8830"
-                        FontSize="Medium"/>
+                        VerticalTextAlignment="Center"
+                        />
                 </Grid>
             </Grid>
-            <Label 
-              Text="{Binding Name}" 
-              HorizontalTextAlignment="Center"
-              FontSize="18"/>
+            <Label
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Name}"
+                />
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage 
+<TabbedPage
+    x:Class="DuolingoClone.Views.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    Title="Titulo App"
     android:TabbedPage.ToolbarPlacement="Bottom"
     BarBackgroundColor="White"
     BarTextColor="Black"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.MainPage"
-    Title="Titulo App">
-</TabbedPage>
+    />

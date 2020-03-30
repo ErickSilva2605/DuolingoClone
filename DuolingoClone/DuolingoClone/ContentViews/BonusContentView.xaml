@@ -1,35 +1,40 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.ContentViews.BonusContentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Margin="15,0"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.ContentViews.BonusContentView"
-    Margin="15,0">
-  <ContentView.Content>
+    >
+    <ContentView.Content>
         <StackLayout
-          Spacing="15">
+            Spacing="15"
+            >
             <Frame
+                Padding="0"
                 BackgroundColor="{Binding Color}"
+                BorderColor="#DBDCDC"
                 CornerRadius="45"
                 HasShadow="False"
-                BorderColor="#DBDCDC"
-                Padding="0"
-                WidthRequest="80"
                 HeightRequest="80"
                 HorizontalOptions="Center"
-                VerticalOptions="Center">
+                VerticalOptions="Center"
+                WidthRequest="80"
+                >
                 <Image
                     HeightRequest="60"
-                    WidthRequest="60"
                     HorizontalOptions="Center"
-                    Source="{Binding Icon}"/>
+                    Source="{Binding Icon}"
+                    WidthRequest="60"
+                    />
             </Frame>
-            <Label 
-              Text="{Binding Name}" 
-              HorizontalTextAlignment="Center"
-              FontSize="18"/>
+            <Label
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Name}"
+                />
         </StackLayout>
     </ContentView.Content>
 </ContentView>

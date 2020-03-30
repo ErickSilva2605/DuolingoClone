@@ -1,25 +1,27 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.ContentViews.LessonGroupMultiContentView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:contentViews="clr-namespace:DuolingoClone.ContentViews"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:contentViews="clr-namespace:DuolingoClone.ContentViews"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.ContentViews.LessonGroupMultiContentView">
-  <ContentView.Content>
+    >
+    <ContentView.Content>
         <FlexLayout
-            Direction="Row"
-            JustifyContent="Center"
-            AlignItems="Center"
-            HeightRequest="160"
             Margin="0,0,0,10"
-            BindableLayout.ItemsSource="{Binding Lessons}">
+            AlignItems="Center"
+            BindableLayout.ItemsSource="{Binding Lessons}"
+            Direction="Row"
+            HeightRequest="160"
+            JustifyContent="Center"
+            >
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <contentViews:LessonContentView/>
+                    <contentViews:LessonContentView />
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </FlexLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

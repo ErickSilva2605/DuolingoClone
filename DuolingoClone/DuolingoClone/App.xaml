@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<prism:PrismApplication 
+<prism:PrismApplication
+    x:Class="DuolingoClone.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.App">
+    >
 
     <Application.Resources>
         <ResourceDictionary>
@@ -14,51 +15,80 @@
                 x:Key="FontBold"
                 x:TypeArguments="x:String"
                 Android="Fonts/DINNextRoundedLTPro-Bold.ttf#DINNextRounded"
-                iOS="DINNextRoundedLTPro-Bold" />
+                iOS="DINNextRoundedLTPro-Bold"
+                />
 
             <OnPlatform
                 x:Key="FontRegular"
                 x:TypeArguments="x:String"
                 Android="Fonts/DINNextRoundedLTPro-Regular.ttf#DINNextRounded"
-                iOS="DINNextRoundedLTPro-Regular" />
+                iOS="DINNextRoundedLTPro-Regular"
+                />
 
-            <Color x:Key="SubTitleColor">#828282</Color>
-            <Color x:Key="TrackColor">#E6E6E6</Color>
-            <Color x:Key="ProgressColor">#F7CA45</Color>
-            
-            <Style TargetType="Label">
+            <Color
+                x:Key="SubTitleColor"
+                >
+                #828282
+            </Color>
+            <Color
+                x:Key="TrackColor"
+                >
+                #E6E6E6
+            </Color>
+            <Color
+                x:Key="ProgressColor"
+                >
+                #F7CA45
+            </Color>
+
+            <Style
+                TargetType="Label"
+                >
                 <Setter Property="FontFamily" Value="{StaticResource FontBold}" />
             </Style>
-            
-            <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="White"/>
+
+            <Style
+                TargetType="NavigationPage"
+                >
+                <Setter Property="BarBackgroundColor" Value="White" />
             </Style>
 
-            <Style x:Key="DivisorLine" TargetType="BoxView">
-                <Setter Property="HeightRequest" Value="2"/>
-                <Setter Property="BackgroundColor" Value="#DBDCDC"/>
-                <Setter Property="Margin" Value="0,15,0,15"/>
+            <Style
+                x:Key="DivisorLine"
+                TargetType="BoxView"
+                >
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="BackgroundColor" Value="#DBDCDC" />
+                <Setter Property="Margin" Value="0,15,0,15" />
             </Style>
 
-            <Style TargetType="ImageButton">
+            <Style
+                TargetType="ImageButton"
+                >
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonState">
-                            <VisualState x:Name="Normal">
+                        <VisualStateGroup
+                            x:Name="CommonState"
+                            >
+                            <VisualState
+                                x:Name="Normal"
+                                >
                                 <VisualState.Setters>
-                                    <Setter Property="TranslationY" Value="-8"/>
+                                    <Setter Property="TranslationY" Value="-8" />
                                 </VisualState.Setters>
                             </VisualState>
-                            <VisualState x:Name="Pressed">
+                            <VisualState
+                                x:Name="Pressed"
+                                >
                                 <VisualState.Setters>
-                                    <Setter Property="TranslationY" Value="0"/>
+                                    <Setter Property="TranslationY" Value="0" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

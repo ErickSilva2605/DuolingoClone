@@ -1,56 +1,69 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.Views.TitleViews.LessonsTitleView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.TitleViews.LessonsTitleView">
-  <ContentView.Content>
-      <FlexLayout
-          Margin="{OnPlatform Android='0,0,15,0', iOS=0}"
-          Direction="Row"
-          AlignItems="Center"
-          JustifyContent="SpaceBetween">
+    >
+    <ContentView.Content>
+        <FlexLayout
+            Margin="{OnPlatform Android='0,0,15,0',
+                                iOS=0}"
+            AlignItems="Center"
+            Direction="Row"
+            JustifyContent="SpaceBetween"
+            >
             <Image
                 HeightRequest="30"
-                Source="navbar_english.png"/>
-          
+                Source="navbar_english.png"
+                />
+
             <StackLayout
-                Orientation="Horizontal">
+                Orientation="Horizontal"
+                >
                 <Image
                     HeightRequest="30"
-                    Source="navbar_crown.png"/>
-                <Label 
+                    Source="navbar_crown.png"
+                    />
+                <Label
+                    FontAttributes="Bold"
                     Text="74"
                     TextColor="#F3C747"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"/>
-            </StackLayout>
-          
-            <StackLayout
-                Orientation="Horizontal">
-                <Image
-                    HeightRequest="30"
-                    Source="navbar_fire.png"/>
-                <Label 
-                    Text="0"
-                    TextColor="#B0AFAF"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"
+                    />
             </StackLayout>
 
             <StackLayout
-                Orientation="Horizontal">
+                Orientation="Horizontal"
+                >
                 <Image
                     HeightRequest="30"
-                    Source="navbar_heart.png"/>
-                <Label 
+                    Source="navbar_fire.png"
+                    />
+                <Label
+                    FontAttributes="Bold"
+                    Text="0"
+                    TextColor="#B0AFAF"
+                    VerticalTextAlignment="Center"
+                    />
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                >
+                <Image
+                    HeightRequest="30"
+                    Source="navbar_heart.png"
+                    />
+                <Label
+                    FontAttributes="Bold"
                     Text="4"
                     TextColor="#DE5C56"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center"
+                    />
             </StackLayout>
         </FlexLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

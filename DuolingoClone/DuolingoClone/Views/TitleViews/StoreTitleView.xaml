@@ -1,44 +1,57 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DuolingoClone.Views.TitleViews.StoreTitleView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.TitleViews.StoreTitleView">
-  <ContentView.Content>
-        <Grid 
-            Margin="{OnPlatform Android='0,0,15,0', iOS=0}">
+    >
+    <ContentView.Content>
+        <Grid
+            Margin="{OnPlatform Android='0,0,15,0',
+                                iOS=0}"
+            >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition
+                    Width="*"
+                    />
+                <ColumnDefinition
+                    Width="*"
+                    />
+                <ColumnDefinition
+                    Width="*"
+                    />
             </Grid.ColumnDefinitions>
             <Label
                 Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Medium"
                 HorizontalTextAlignment="Center"
-                VerticalTextAlignment="Center"
                 Text="Store"
                 TextColor="#B0AFAF"
-                FontSize="Medium"
-                FontAttributes="Bold"/>
+                VerticalTextAlignment="Center"
+                />
             <StackLayout
-                Spacing="0"
-                Orientation="Horizontal"
+                Grid.Column="2"
                 HorizontalOptions="End"
-                Grid.Column="2">
+                Orientation="Horizontal"
+                Spacing="0"
+                >
                 <Image
-                    HorizontalOptions="End"
                     HeightRequest="30"
-                    Source="navbar_diamont.png"/>
+                    HorizontalOptions="End"
+                    Source="navbar_diamont.png"
+                    />
                 <Label
+                    FontAttributes="Bold"
+                    FontSize="Medium"
                     HorizontalOptions="End"
                     HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
                     Text="300"
                     TextColor="#DE5C56"
-                    FontSize="Medium"
-                    FontAttributes="Bold"/>
+                    VerticalTextAlignment="Center"
+                    />
             </StackLayout>
         </Grid>
     </ContentView.Content>

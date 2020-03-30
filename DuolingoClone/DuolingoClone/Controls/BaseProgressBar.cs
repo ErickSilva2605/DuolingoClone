@@ -11,7 +11,7 @@ namespace DuolingoClone.Controls
             BindableProperty.Create(
                 nameof(TrackColor),
                 typeof(Color),
-                typeof(CircularProgressBar),
+                typeof(BaseProgressBar),
                 Color.Transparent
             );
 
@@ -19,7 +19,7 @@ namespace DuolingoClone.Controls
             BindableProperty.Create(
                 nameof(ProgressColor),
                 typeof(Color),
-                typeof(CircularProgressBar),
+                typeof(BaseProgressBar),
                 Color.Transparent
             );
 
@@ -27,7 +27,7 @@ namespace DuolingoClone.Controls
             BindableProperty.Create(
                 nameof(Progress),
                 typeof(double),
-                typeof(CircularProgressBar),
+                typeof(BaseProgressBar),
                 0.0
             );
 

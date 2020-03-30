@@ -1,39 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<ContentPage
+    x:Class="DuolingoClone.Views.LessonsView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     xmlns:templates="clr-namespace:DuolingoClone.Templates"
     mc:Ignorable="d"
-    x:Class="DuolingoClone.Views.LessonsView">
+    >
     <ContentPage.Content>
         <AbsoluteLayout>
             <ScrollView
                 AbsoluteLayout.LayoutBounds="1,1,1,1"
-                AbsoluteLayout.LayoutFlags="All">
+                AbsoluteLayout.LayoutFlags="All"
+                >
 
                 <FlexLayout
-                    BindableLayout.ItemsSource="{Binding LessonGroups}"
                     BindableLayout.ItemTemplateSelector="{templates:LessonGroupDataTemplateSelector}"
+                    BindableLayout.ItemsSource="{Binding LessonGroups}"
                     Direction="Column"
-                    >
-                    
-                </FlexLayout>
-                
+                    />
+
             </ScrollView>
 
             <controls:FormsFloatingActionButton
-                IsVisible="{OnPlatform Android=true, iOS=false}"
                 AbsoluteLayout.LayoutBounds="1,1,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                HorizontalOptions="End"
-                VerticalOptions="End"
                 BackgroundColor="White"
+                Command="{Binding NavigateToTrainingCommand}"
+                HorizontalOptions="End"
                 ImageSource="fab_training"
-                Command="{Binding NavigateToTrainingCommand}"/>
-            
+                IsVisible="{OnPlatform Android=true,
+                                       iOS=false}"
+                VerticalOptions="End"
+                />
+
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
