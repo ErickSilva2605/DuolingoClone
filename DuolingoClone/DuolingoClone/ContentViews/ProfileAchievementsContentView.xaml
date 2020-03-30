@@ -25,7 +25,7 @@
                     <ViewCell>
                         <ViewCell.View>
                             <FlexLayout Padding="20">
-                                <Grid FlexLayout.Basis="200" HeightRequest="130">
+                                <Grid FlexLayout.Basis="180" HeightRequest="130">
                                     <Image Source="{Binding Icon}" />
 
                                     <Label
@@ -70,7 +70,7 @@
 
                                         <controls:HorizontalProgressBar
                                             Grid.Column="0"
-                                            HeightRequest="30"
+                                            HeightRequest="20"
                                             Progress="{Binding Progress}"
                                             ProgressColor="{StaticResource ProgressColor}"
                                             TrackColor="{StaticResource TrackColor}"
