@@ -23,6 +23,8 @@
                 iOS="DINNextRoundedLTPro-Regular" />
 
             <Color x:Key="SubTitleColor">#828282</Color>
+            <Color x:Key="TrackColor">#E6E6E6</Color>
+            <Color x:Key="ProgressColor">#F7CA45</Color>
             
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource FontBold}" />

@@ -63,12 +63,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controls\CircularProgressBarIOS.cs" />
+    <Compile Include="Controls\HorizontalProgressBarIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\CircularProgressBarRenderer.cs" />
     <Compile Include="Renderers\CustomImageButtonRenderer.cs" />
     <Compile Include="Renderers\CustomNavigationPageRenderer.cs" />
     <Compile Include="Renderers\CustomTabbedPageRenderer.cs" />
+    <Compile Include="Renderers\HorizontalProgressBarRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

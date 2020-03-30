@@ -4,11 +4,79 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:DuolingoClone.Controls"
     mc:Ignorable="d"
     x:Class="DuolingoClone.ContentViews.ProfileAchievementsContentView">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Achievements" />
-      </StackLayout>
+        <ListView
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Achievements}"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <FlexLayout Padding="20">
+                                <Grid FlexLayout.Basis="200" HeightRequest="130">
+                                    <Image Source="{Binding Icon}" />
+
+                                        <!--TextColor="{Binding IsActive, Converter={converters:AchievementsActiveToTextColorConverter}}"-->
+                                    <Label
+                                        FontSize="18"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Level}"
+                                        TranslationY="-20"
+                                        VerticalTextAlignment="End" />
+                                </Grid>
+
+                                <FlexLayout
+                                    Margin="20,0,0,0"
+                                    Direction="Column"
+                                    FlexLayout.Basis="100%"
+                                    JustifyContent="SpaceEvenly">
+                                    <Label
+                                        FontSize="24"
+                                        Text="{Binding Name}"
+                                        VerticalOptions="CenterAndExpand" />
+
+                                    <Label
+                                        FontFamily="{StaticResource FontRegular}"
+                                        FontSize="20"
+                                        Text="{Binding Description}"
+                                        TextColor="#777777"
+                                        VerticalOptions="CenterAndExpand" />
+
+                                    <Grid
+                                        ColumnSpacing="20"
+                                        IsVisible="{Binding IsActive}"
+                                        VerticalOptions="CenterAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <controls:HorizontalProgressBar
+                                            Grid.Column="0"
+                                            HeightRequest="30"
+                                            Progress="{Binding Progress}"
+                                            ProgressColor="{StaticResource ProgressColor}"
+                                            TrackColor="{StaticResource TrackColor}"
+                                            VerticalOptions="Center" />
+
+                                        <Label
+                                            Grid.Column="1"
+                                            FontSize="18"
+                                            Text="{Binding Status}"
+                                            TextColor="#AFAFAE"
+                                            VerticalOptions="Center" />
+                                    </Grid>
+                                </FlexLayout>
+                            </FlexLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
   </ContentView.Content>
 </ContentView>

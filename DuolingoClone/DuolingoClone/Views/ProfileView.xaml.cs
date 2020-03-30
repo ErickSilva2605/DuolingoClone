@@ -22,6 +22,7 @@ namespace DuolingoClone.Views
         private Grid _lastSelected;
         private View _title;
 
+        private bool _isFirstAppear = true;
         public ProfileView()
         {
             InitializeComponent();
@@ -31,6 +32,14 @@ namespace DuolingoClone.Views
         {
             base.OnAppearing();
 
+            if(_isFirstAppear)
+                SelectFirstSection();
+
+            _isFirstAppear = false;
+        }
+
+        private void SelectFirstSection()
+        {
             int index = 0;
             foreach (var view in flexLayoutSection.Children)
             {
@@ -39,7 +48,8 @@ namespace DuolingoClone.Views
                     if (index++ == 0)
                     {
                         GoToStateSelected(grid);
-                        sectionContentView.Content = _sectionAchievements.Value;
+                        sectionAchievements.IsVisible = true;
+                        sectionAchievements.Content = _sectionAchievements.Value;
                         continue;
                     }
 
@@ -75,12 +85,16 @@ namespace DuolingoClone.Views
 
                 if (grid.AutomationId == _gridAchievements)
                 {
-                    sectionContentView.Content = _sectionAchievements.Value;
+                    sectionFriends.IsVisible = false;
+                    sectionAchievements.IsVisible = true;
+                    sectionAchievements.Content = _sectionAchievements.Value;
                 }
 
                 if (grid.AutomationId == _gridFriends)
                 {
-                    sectionContentView.Content = _sectionFriends.Value;
+                    sectionAchievements.IsVisible = false;
+                    sectionFriends.IsVisible = true;
+                    sectionFriends.Content = _sectionFriends.Value;
                 }
             }
         }

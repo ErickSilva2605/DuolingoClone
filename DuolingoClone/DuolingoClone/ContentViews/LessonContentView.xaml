@@ -21,8 +21,8 @@
                 <controls:CircularProgressBar
                     WidthRequest="120"
                     HeightRequest="120"
-                    TrackColor="#E6E6E6"
-                    ProgressColor="#F7CA45"
+                    TrackColor="{StaticResource TrackColor}"
+                    ProgressColor="{StaticResource ProgressColor}"
                     Progress="{Binding Progress}"
                     Rotation="135"/>
                 
