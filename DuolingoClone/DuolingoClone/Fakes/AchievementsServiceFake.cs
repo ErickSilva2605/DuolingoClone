@@ -21,12 +21,12 @@ namespace DuolingoClone.Fakes
             {
                 return new List<AchievementsModel>
                 {
-                    GetAchievement(_profileImageAchievement1, "NÍVEL 9", "Majestade", "Ganhe 80 coroas", 0.9875, "79/80"),
-                    GetAchievement(_profileImageAchievement2, "NÍVEL 8", "Intelectual", "Aprenda 1.000 novas palavras em um curso", 0.863, "863/1K"),
-                    GetAchievement(_profileImageAchievement3, "NÍVEL 5", "Na Mosca", "Complete 100 lições sem errar nada", 0.81, "81/100"),
-                    GetAchievement(_profileImageAchievement4, "NÍVEL 7", "Sabe-tudo", "Ganhe 7500 XP", 0.72, "5,4K/7,5K"),
-                    GetAchievement(_profileImageAchievement5, "NÍVEL 3", "Fogueira", "Alcance uma ofensiva de 14 dias", 0.5, "7/14"),
-                    GetAchievement(_profileImageAchievement6, "NÍVEL 1", "Estrategista", "Voçê leu uma diac", 0.1, string.Empty)
+                    GetAchievement(_profileImageAchievement1, "NÍVEL 9", "Majestade", "Ganhe 80 coroas", 0.9875, "79/80", true),
+                    GetAchievement(_profileImageAchievement2, "NÍVEL 8", "Intelectual", "Aprenda 1.000 novas palavras em um curso", 0.863, "863/1K", true),
+                    GetAchievement(_profileImageAchievement3, "NÍVEL 5", "Na Mosca", "Complete 100 lições sem errar nada", 0.81, "81/100", true),
+                    GetAchievement(_profileImageAchievement4, "NÍVEL 7", "Sabe-tudo", "Ganhe 7500 XP", 0.72, "5,4K/7,5K", true),
+                    GetAchievement(_profileImageAchievement5, "NÍVEL 3", "Fogueira", "Alcance uma ofensiva de 14 dias", 0.5, "7/14", true),
+                    GetAchievement(_profileImageAchievement6, "NÍVEL 1", "Estrategista", "Voçê leu uma dica", 0.1, string.Empty, false)
                 };
             });
         }
@@ -37,7 +37,8 @@ namespace DuolingoClone.Fakes
             string name,
             string description,
             double progress,
-            string status)
+            string status,
+            bool isActive)
         {
             return new AchievementsModel
             {
@@ -46,7 +47,8 @@ namespace DuolingoClone.Fakes
                 Name = name,
                 Description = description,
                 Progress = progress,
-                Status = status
+                Status = status,
+                IsActive = isActive
             };
         }
     }
