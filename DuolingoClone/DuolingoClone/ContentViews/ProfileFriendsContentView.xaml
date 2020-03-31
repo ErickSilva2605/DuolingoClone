@@ -8,8 +8,15 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="Friends" />
-        </StackLayout>
+        <ListView>
+            <ListView.Header>
+                <FlexLayout />
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <FlexLayout />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentView.Content>
 </ContentView>

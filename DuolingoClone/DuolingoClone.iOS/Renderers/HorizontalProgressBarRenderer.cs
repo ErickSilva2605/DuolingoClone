@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DuolingoClone.Controls;
+﻿using DuolingoClone.Controls;
 using DuolingoClone.iOS.Controls;
 using DuolingoClone.iOS.Renderers;
-using Foundation;
-using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 

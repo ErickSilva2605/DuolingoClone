@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace DuolingoClone.Interfaces
 {
-    public interface IAchievementsService
+    public interface IFriendsService
     {
-        Task<IList<AchievementsModel>> GetAchievements();
+        Task<IList<FriendModel>> GetFriends();
     }
 }

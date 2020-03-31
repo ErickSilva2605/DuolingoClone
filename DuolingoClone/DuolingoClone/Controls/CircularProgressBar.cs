@@ -1,9 +1,7 @@
-﻿using Xamarin.Forms;
-
-namespace DuolingoClone.Controls
+﻿namespace DuolingoClone.Controls
 {
     public class CircularProgressBar : BaseProgressBar
     {
-        
+
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DuolingoClone.Controls
+﻿namespace DuolingoClone.Controls
 {
     public class HorizontalProgressBar : BaseProgressBar
     {

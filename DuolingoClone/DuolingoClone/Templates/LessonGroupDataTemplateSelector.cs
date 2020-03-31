@@ -1,5 +1,4 @@
-﻿using System;
-using DuolingoClone.ContentViews;
+﻿using DuolingoClone.ContentViews;
 using DuolingoClone.Models;
 using Xamarin.Forms;
 

@@ -122,7 +122,7 @@ namespace DuolingoClone.Fakes
                 Icon = icon,
                 Color = color,
                 Progress = progress
-                
+
             };
         }
     }

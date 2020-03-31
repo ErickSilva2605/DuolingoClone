@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CoreAnimation;
+﻿using CoreAnimation;
 using CoreGraphics;
-using Foundation;
+using System;
 using UIKit;
 
 namespace DuolingoClone.iOS.Controls

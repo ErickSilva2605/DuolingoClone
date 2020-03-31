@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DuolingoClone.Models
+﻿namespace DuolingoClone.Models
 {
     public class LessonModel
     {
@@ -10,6 +6,6 @@ namespace DuolingoClone.Models
         public string Level { get; set; }
         public string Icon { get; set; }
         public string Color { get; set; }
-        public double  Progress { get; set; }
+        public double Progress { get; set; }
     }
 }

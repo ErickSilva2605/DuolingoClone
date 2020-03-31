@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DuolingoClone.ViewModels
+﻿namespace DuolingoClone.ViewModels
 {
     public class RankingViewModel : ViewModelBase
     {

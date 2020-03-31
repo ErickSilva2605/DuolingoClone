@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DuolingoClone.ViewModels
@@ -16,10 +15,10 @@ namespace DuolingoClone.ViewModels
         public ObservableCollection<StoriesGroupModel> Stories { get; private set; }
 
         private bool _isActive;
-        public bool IsActive 
-        { 
-            get => _isActive; 
-            set => SetProperty(ref _isActive, value, RaiseIsActivatedChanged); 
+        public bool IsActive
+        {
+            get => _isActive;
+            set => SetProperty(ref _isActive, value, RaiseIsActivatedChanged);
         }
 
         public StoriesViewModel(IStoriesService storiesService)

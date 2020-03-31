@@ -1,12 +1,11 @@
-﻿using System;
-using Android.Content;
+﻿using Android.Content;
 using Android.Support.Design.BottomNavigation;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using DuolingoClone.Droid.Renderers;
 using DuolingoClone.Droid.Utils;
 using DuolingoClone.Interfaces;
-using DuolingoClone.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using TabPagRenderer = Xamarin.Forms.Platform.Android.AppCompat;
@@ -70,7 +69,7 @@ namespace DuolingoClone.Droid.Renderers
                 {
                     if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
                     {
-                        androidTab.SetIcon(ResourcesUtil.GetIconIdByFileName(tabPage.GetSelectedIcon(),Context));
+                        androidTab.SetIcon(ResourcesUtil.GetIconIdByFileName(tabPage.GetSelectedIcon(), Context));
                         continue;
                     }
 

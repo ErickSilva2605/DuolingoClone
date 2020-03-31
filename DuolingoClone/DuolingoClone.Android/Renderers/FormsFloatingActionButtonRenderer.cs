@@ -4,7 +4,6 @@ using Android.Support.Design.Widget;
 using DuolingoClone.Controls;
 using DuolingoClone.Droid.Renderers;
 using DuolingoClone.Droid.Utils;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using AppCompat = Xamarin.Forms.Platform.Android.AppCompat;
@@ -31,7 +30,7 @@ namespace DuolingoClone.Droid.Renderers
 
                 ConfigureDrawableIcon();
                 ConfigureBackgroundColor();
-                
+
                 _floatingActionButton.Click += OnFabClick;
 
                 SetNativeControl(_floatingActionButton);
@@ -48,7 +47,7 @@ namespace DuolingoClone.Droid.Renderers
             if (fileName == null)
                 return;
 
-            var iconId = ResourcesUtil.GetIconIdByFileName(fileName,Context);
+            var iconId = ResourcesUtil.GetIconIdByFileName(fileName, Context);
             _floatingActionButton.SetImageResource(iconId);
         }
 

@@ -1,7 +1,6 @@
 ﻿using CoreGraphics;
 using DuolingoClone.Interfaces;
 using DuolingoClone.iOS.Renderers;
-using DuolingoClone.Views;
 using System;
 using System.Threading.Tasks;
 using UIKit;

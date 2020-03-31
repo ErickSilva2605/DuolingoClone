@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DuolingoClone.Interfaces
+﻿namespace DuolingoClone.Interfaces
 {
     public interface ITabPageIcons
     {

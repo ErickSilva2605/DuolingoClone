@@ -1,12 +1,12 @@
 ﻿using Android.Content;
-using AW = Android.Widget;
-using DuolingoClone.Controls;
-using Xamarin.Forms.Platform.Android;
-using Xamarin.Forms;
-using DuolingoClone.Droid.Renderers;
 using Android.Content.Res;
 using Android.Graphics.Drawables;
+using DuolingoClone.Controls;
+using DuolingoClone.Droid.Renderers;
 using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using AW = Android.Widget;
 
 [assembly: ExportRenderer(typeof(HorizontalProgressBar), typeof(HorizontalProgressBarRenderer))]
 namespace DuolingoClone.Droid.Renderers

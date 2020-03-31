@@ -32,7 +32,7 @@ namespace DuolingoClone.Views
         {
             base.OnAppearing();
 
-            if(_isFirstAppear)
+            if (_isFirstAppear)
                 SelectFirstSection();
 
             _isFirstAppear = false;

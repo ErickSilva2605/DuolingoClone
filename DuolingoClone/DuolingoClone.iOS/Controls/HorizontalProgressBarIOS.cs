@@ -1,6 +1,6 @@
-﻿using System;
-using CoreAnimation;
+﻿using CoreAnimation;
 using CoreGraphics;
+using System;
 using UIKit;
 
 namespace DuolingoClone.iOS.Controls

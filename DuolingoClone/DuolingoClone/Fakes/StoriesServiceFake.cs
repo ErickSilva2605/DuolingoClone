@@ -1,8 +1,6 @@
 ﻿using DuolingoClone.Interfaces;
 using DuolingoClone.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DuolingoClone.Fakes
@@ -16,7 +14,7 @@ namespace DuolingoClone.Fakes
 
         public async Task<IList<StoriesGroupModel>> GetStories()
         {
-            return await Task.Run(() => 
+            return await Task.Run(() =>
             {
                 return new List<StoriesGroupModel>
                 {
@@ -35,7 +33,7 @@ namespace DuolingoClone.Fakes
         }
 
         private StoriesModel GetNewStories(string name, string image, string shadowBottomColor)
-        { 
+        {
             return new StoriesModel
             {
                 Name = name,
