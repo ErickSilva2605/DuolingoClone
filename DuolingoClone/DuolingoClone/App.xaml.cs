@@ -39,6 +39,7 @@ namespace DuolingoClone
             containerRegistry.Register<ILessonService, LessonServiceFake>();
             containerRegistry.Register<IStoriesService, StoriesServiceFake>();
             containerRegistry.Register<IAchievementsService, AchievementsServiceFake>();
+            containerRegistry.Register<IFriendsService, FriendsServiceFake>();
         }
 
         protected override void OnStart()

@@ -8,15 +8,116 @@
     mc:Ignorable="d"
     >
     <ContentView.Content>
-        <ListView>
-            <ListView.Header>
-                <FlexLayout />
-            </ListView.Header>
-            <ListView.ItemTemplate>
+        <CollectionView ItemsSource="{Binding Friends}">
+            <CollectionView.Header>
+                <StackLayout Padding="25,25,25,0">
+                    <Grid ColumnSpacing="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="70"
+                            Source="profile_friends_gift"
+                            VerticalOptions="Start"
+                            WidthRequest="70"
+                            />
+
+                        <StackLayout Grid.Column="1" Spacing="10">
+
+                            <Label FontSize="Medium" Text="Ganhe o Duolingo Plus de graça! " />
+
+                            <Label
+                                FontFamily="{StaticResource FontRegular}"
+                                FontSize="18"
+                                Text="Ganhe um mês de Duolingo Plus gratis para cada amigo que entrar pro Duolingo"
+                                TextColor="{StaticResource SubTitleColor}"
+                                />
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid Margin="0,30,0,0">
+                        <BoxView
+                            BackgroundColor="#1799D5"
+                            CornerRadius="17"
+                            HeightRequest="50"
+                            />
+
+                        <Button
+                            BackgroundColor="#1BB0F7"
+                            CornerRadius="17"
+                            HeightRequest="50"
+                            Style="{StaticResource ElevatedButton}"
+                            Text="CONVIDAR AMIGOS"
+                            TextColor="White"
+                            />
+                    </Grid>
+                    <FlexLayout
+                        Margin="0,40,0,0"
+                        AlignItems="Center"
+                        JustifyContent="SpaceBetween"
+                        >
+                        <Label
+                            FontSize="Large"
+                            HorizontalTextAlignment="End"
+                            Text="Total de XP"
+                            />
+
+                        <Button
+                            BackgroundColor="Transparent"
+                            FontFamily="{StaticResource FontBold}"
+                            FontSize="22"
+                            Text="ADICIONAR"
+                            TextColor="#1BB0F7"
+                            />
+                    </FlexLayout>
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <FlexLayout />
+                    <Grid Padding="25,10" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Frame
+                            Grid.Column="0"
+                            Margin="10"
+                            Padding="0"
+                            CornerRadius="30"
+                            IsClippedToBounds="True"
+                            >
+                            <Image
+                                HeightRequest="60"
+                                Source="{Binding Photo}"
+                                WidthRequest="60"
+                                />
+                        </Frame>
+
+                        <Label
+                            Grid.Column="1"
+                            FontSize="Medium"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Name}"
+                            VerticalTextAlignment="Center"
+                            />
+
+                        <Label
+                            Grid.Column="2"
+                            FontFamily="{StaticResource FontRegular}"
+                            FontSize="18"
+                            Text="{Binding Experience}"
+                            TextColor="{StaticResource SubTitleColor}"
+                            VerticalTextAlignment="Center"
+                            />
+
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentView.Content>
 </ContentView>

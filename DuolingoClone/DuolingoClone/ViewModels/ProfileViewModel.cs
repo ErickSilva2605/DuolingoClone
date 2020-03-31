@@ -11,12 +11,17 @@ namespace DuolingoClone.ViewModels
     public class ProfileViewModel : ViewModelBase, IActiveAware
     {
         private readonly IAchievementsService _achievementsService;
+        private readonly IFriendsService _friendsService;
 
         public ObservableCollection<AchievementsModel> Achievements { get; private set; }
-        public ProfileViewModel(IAchievementsService achievementsService)
+        public ObservableCollection<FriendModel> Friends { get; private set; }
+        public ProfileViewModel(IAchievementsService achievementsService, IFriendsService friendsService)
         {
             _achievementsService = achievementsService;
+            _friendsService = friendsService;
+
             Achievements = new ObservableCollection<AchievementsModel>();
+            Friends = new ObservableCollection<FriendModel>();
         }
 
         public event EventHandler IsActiveChanged;
@@ -44,6 +49,14 @@ namespace DuolingoClone.ViewModels
 
                 foreach (var achievement in achievements)
                     Achievements.Add(achievement);
+
+                var friends = await _friendsService.GetFriends();
+
+                if (Friends.Any())
+                    Friends.Clear();
+
+                foreach (var friend in friends)
+                    Friends.Add(friend);
             }
         }
     }
