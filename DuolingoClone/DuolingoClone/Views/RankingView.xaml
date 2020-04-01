@@ -15,12 +15,12 @@
             </Style>
             <Style x:Key="RankingLevelHighlight" TargetType="Image">
                 <Setter Property="HeightRequest" Value="{OnPlatform Android=95, iOS=120}" />
-                <Setter Property="Margin" Value="20,10,10,10" />
+                <Setter Property="Margin" Value="10" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid Margin="{OnPlatform Android='0,15,0,0', iOS='0,50,0,0'}" RowSpacing="20">
+        <Grid Margin="{OnPlatform Android='0,15,0,0', iOS='0,50,0,66'}" RowSpacing="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -28,8 +28,9 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Row="0">
-                <ScrollView Orientation="Horizontal">
-                    <StackLayout Orientation="Horizontal">
+                <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+
+                    <StackLayout Margin="15,0" Orientation="Horizontal">
                         <Image Source="ranking_level_1" Style="{StaticResource RankingLevelHighlight}" />
                         <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
                         <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
@@ -42,13 +43,16 @@
                         <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
                         <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
                     </StackLayout>
+
                 </ScrollView>
+
                 <Label
                     FontSize="30"
                     HorizontalTextAlignment="Center"
                     Text="Divisão Bronze"
                     TextColor="{StaticResource TitleColor}"
                     />
+
                 <Label
                     FontFamily="{StaticResource FontRegular}"
                     FontSize="24"
@@ -57,8 +61,22 @@
                     TextColor="{StaticResource SubTitleColor}"
                     />
             </StackLayout>
+
             <BoxView Grid.Row="1" Style="{StaticResource DivisorLine}" />
-            <BoxView Grid.Row="2" BackgroundColor="Blue" />
+
+            <StackLayout
+                Grid.Row="2"
+                Margin="30,0"
+                VerticalOptions="Center"
+                >
+                <Image HeightRequest="150" Source="ranking_duo_sleeping" />
+                <Label
+                    FontFamily="{StaticResource FontRegular}"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    Text="Conclua uma lição para entrar no ranking dessa semana!"
+                    />
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
