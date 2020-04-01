@@ -7,13 +7,58 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RankingLevel" TargetType="Image">
+                <Setter Property="HeightRequest" Value="{OnPlatform Android=50, iOS=70}" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style x:Key="RankingLevelHighlight" TargetType="Image">
+                <Setter Property="HeightRequest" Value="{OnPlatform Android=95, iOS=120}" />
+                <Setter Property="Margin" Value="20,10,10,10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Ranking view"
-                VerticalOptions="CenterAndExpand"
-                />
-        </StackLayout>
+        <Grid Margin="{OnPlatform Android='0,15,0,0', iOS='0,50,0,0'}" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="ranking_level_1" Style="{StaticResource RankingLevelHighlight}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                    </StackLayout>
+                </ScrollView>
+                <Label
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    Text="Divisão Bronze"
+                    TextColor="{StaticResource TitleColor}"
+                    />
+                <Label
+                    FontFamily="{StaticResource FontRegular}"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    Text="Compita com jogadores em um ranking semanal!"
+                    TextColor="{StaticResource SubTitleColor}"
+                    />
+            </StackLayout>
+            <BoxView Grid.Row="1" Style="{StaticResource DivisorLine}" />
+            <BoxView Grid.Row="2" BackgroundColor="Blue" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
